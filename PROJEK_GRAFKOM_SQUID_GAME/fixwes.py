@@ -584,7 +584,7 @@ def main_menu():
         #=========SQUID=========
         #huruf s
         #//1
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
+        glColor3f(205,229,50)# menetapkan warna menjadi kuning
         glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (-250, 132)#titik n18
         glVertex2f (-250, 152)#titik i18
@@ -593,7 +593,7 @@ def main_menu():
         glEnd()
 
         #//2
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
+        glColor3f(205,229,50)# menetapkan warna menjadi kuning
         glBegin(GL_POLYGON)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
 
         glVertex2f (-162, 194)#titik d18
@@ -605,7 +605,7 @@ def main_menu():
 
 
         #//3
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
+        glColor3f(205,229,50)# menetapkan warna menjadi kuning
         glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (-162, 194)#titik d18
         glVertex2f(-162, 174) #titik b18
