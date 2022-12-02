@@ -27,78 +27,53 @@ def background():
     glEnd()
 
 def tulisan():
+
     glColor3f(1,1,1)
+    #huruf L
     glBegin(GL_POLYGON)
-    # #Huruf Y
-    # #//1
-    # glVertex2f(-560, 260) #titik s
-    # glVertex2f(-520, 260) #titik t
-    # glVertex2f(-460, 200) # titik r
-    # glVertex2f(-500, 200) #titik q
-
-    # #//2
-    # glVertex2f(-440, 260) #titik u
-    # glVertex2f(-400, 260) #titik v
-    # glVertex2f(-460, 200) # titik r
-    # glVertex2f(-500, 200) #titik q
-
-    # #//3
-    # glVertex2f(-460, 200) # titik r
-    # glVertex2f(-500, 200) #titik q
-    # glVertex2f(-500, 102) #titik o
-    # glVertex2f(-460, 102) #titik p
-
-    # # Huruf U
-    # #//1
-    glVertex2f(-383,0) # titik b1
-    glVertex2f(-384,199) #titik c1
-    # glVertex2f(-384,199) #titik c1
-    glVertex2f(-300,200) #titik c1
-    # glVertex2f(-300,200) #titik c1
-    glVertex2f(-305,58) #titik c1
-    # glVertex2f(-305,58) #titik c1
-    glVertex2f(-200,60) #titik c1
-    # glVertex2f(-200,60) #titik c1
-    glVertex2f(-200,0) #titik c1
-    # glVertex2f(-200,0) #titik c1
-    glVertex2f(-383,0) #titik c1
-
+    glVertex2f(-383,0) 
+    glVertex2f(-384,199) 
+    glVertex2f(-300,200) 
+    glVertex2f(-305,58) 
+    glVertex2f(-200,60) 
+    glVertex2f(-200,0) 
+    glVertex2f(-383,0) 
     glEnd()
 
-    # #//2
-    # glBegin(GL_POLYGON)
-    # glVertex2f(-280, 160) #titik m1
-    # glVertex2f(-276, 139) # titik s4
-    # glVertex2f(-249, 108) #titik t4
-    # glVertex2f(-200, 103) #titik u4
-    # glVertex2f(-174, 121) #titik v4
-    # glVertex2f(-160, 160) #titik k1
-    # glEnd()
+    #huruf O
+    glBegin(GL_QUADS)
+    glVertex2f(-150,0) 
+    glVertex2f(-146,183) 
+    glVertex2f(-54,207) 
+    glVertex2f(-50,0) 
+    glVertex2f(-150,0)  
+    glEnd()
     
 
-    # #//2 sisi dalam
-    # glColor3f(0,0,0)
-    # glBegin(GL_POLYGON)
-    # glVertex2f(-240, 160) #titik d1
-    # glVertex2f(-230,143) # titik r4
-    # glVertex2f(-207, 145) #titik w4
-    # glVertex2f(-200, 160) #titik l1
-    # glEnd()
+    #huruf 0 dalam 
+    glColor3f(0,0,0)
+    glBegin(GL_POLYGON)
+    glVertex2f(-127, 28) #titik d1
+    glVertex2f(-120,161) # titik r4
+    glVertex2f(-69, 176) #titik w4
+    glVertex2f(-78, 26) #titik l1
+    glEnd()
 
-    # #//3
+    #huruf S
+
     # glColor3f(1,1,1)
     # glBegin(GL_QUADS)
-    # glVertex2f(-200, 160) #titik l1
-    # glVertex2f(-160, 160) #titik k1
-    # glVertex2f(-160, 280) #titik j1
-    # glVertex2f(-200, 280) #titik i1
 
-    #huruf L
-    #//1
-    # glVertex2f(-120, 260) #titik a
-    # glVertex2f(-80, 260) #titik e
-    # glVertex2f(-80, 100) #titik z4
-    # glVertex2f(-120, 100) #titik b
+    # glVertex(58, -13) 
+    # glVertex(233, 0) 
+    # glVertex(173, 32) 
+    # glVertex(84, 25) 
+   
+
+    # glVertex(173, 32) 
+    # glVertex(175,56 ) 
+ 
+    # glEnd()
 
     # #//2
     # glVertex2f(-120, 140) #titik a5
