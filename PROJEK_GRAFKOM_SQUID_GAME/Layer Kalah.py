@@ -51,16 +51,16 @@ def tulisan():
     # # Huruf U
     # #//1
     glVertex2f(-383,0) # titik b1
-    glVertex2f(-384.,199) #titik c1
     glVertex2f(-384,199) #titik c1
+    # glVertex2f(-384,199) #titik c1
     glVertex2f(-300,200) #titik c1
-    glVertex2f(-300,200) #titik c1
+    # glVertex2f(-300,200) #titik c1
     glVertex2f(-305,58) #titik c1
-    glVertex2f(-305,58) #titik c1
+    # glVertex2f(-305,58) #titik c1
     glVertex2f(-200,60) #titik c1
-    glVertex2f(-200,60) #titik c1
+    # glVertex2f(-200,60) #titik c1
     glVertex2f(-200,0) #titik c1
-    glVertex2f(-200,0) #titik c1
+    # glVertex2f(-200,0) #titik c1
     glVertex2f(-383,0) #titik c1
 
     glEnd()
