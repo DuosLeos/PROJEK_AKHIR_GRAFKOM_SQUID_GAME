@@ -726,8 +726,8 @@ def main_menu():
         glVertex2f (8, 150)#titik l19
         glVertex2f (12, 140)#titik g26
         glVertex2f (20, 133)#titik h26
-        glVertex2f (30, 140)#titik i26
-        glVertex2f (40, 130)#titik j26
+        glVertex2f (30, 150)#titik i26
+        glVertex2f (30, 130)#titik j26
         glVertex2f (48, 134)#titik m26
         glVertex2f (54, 141)#titik l26
         glVertex2f (58, 150)#titik k26
@@ -829,7 +829,7 @@ def main_menu():
         glEnd()
 
         #sisi dalam D
-        glColor3ub(205,229,50) #bg layer 2
+        glColor3ub(255,20,147) #bg layer 2
         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (188, 210)#titik g20
         glVertex2f (148, 210)#titik d20
