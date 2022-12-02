@@ -635,7 +635,7 @@ def main_menu():
 
         #garis huruf q
         #//1
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
+        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (-77, 165)#titik k20
         glVertex2f (-62, 170)#titik j20
@@ -644,7 +644,7 @@ def main_menu():
         glEnd()
        
         #//2
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
+        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (-120, 148)
         glVertex2f (-100, 148)
@@ -653,7 +653,7 @@ def main_menu():
         glEnd()
        
         #//3
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
+        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (-20, 132)#titik m20
         glVertex2f (-20, 148)#titik l20
@@ -662,7 +662,7 @@ def main_menu():
         glEnd()
        
         #//4
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
+        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
         glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (-20, 148)#titik j20
         glVertex2f (-40, 148)#titik k20
@@ -671,7 +671,7 @@ def main_menu():
         glEnd()
        
         #//5
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
+        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
         glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (-40, 235)#titik k20
         glVertex2f (-40, 220)#titik j20
@@ -682,7 +682,7 @@ def main_menu():
 
         #huruf U
         #//1
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
+        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
         glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (-12, 235)#titik f19
         glVertex2f (-12, 150)#titik j19
@@ -691,7 +691,7 @@ def main_menu():
         glEnd()
 
         # //2
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
+        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (8, 150)#titik l19
         glVertex2f (-12, 150)#titik j19
@@ -712,7 +712,7 @@ def main_menu():
         glEnd()
 
         #//3
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
+        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
         glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (58, 235)#titik m19
         glVertex2f (78, 235)#titik s19
@@ -721,7 +721,7 @@ def main_menu():
         glEnd()
 
         # sisi dalam U
-        glColor3ub(74, 74, 54)
+        glColor3ub(205,229,50)
         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (8, 150)#titik l19
         glVertex2f (12, 140)#titik g26
@@ -734,7 +734,7 @@ def main_menu():
         glEnd()
 
         # sisi dalam U
-        glColor3ub(36, 36, 33)
+        glColor3ub(205,229,50)
         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (8, 150)#titik l19
         glVertex2f (58, 150)#titik k26
@@ -743,7 +743,7 @@ def main_menu():
         glEnd()
 
         #Huruf I
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
+        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
         glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (98, 235)#titik w19
         glVertex2f (118, 235)#titik z19
@@ -753,7 +753,7 @@ def main_menu():
 
         #Huruf D
         #//1
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
+        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
         glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (128, 235)#titik w20
         glVertex2f (148, 235)#titik z20
@@ -762,7 +762,7 @@ def main_menu():
         glEnd()
 
         #//2
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
+        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
         glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (148, 230)#titik z20
         glVertex2f (148, 210)#titik d20
@@ -772,7 +772,7 @@ def main_menu():
         
 
         #Huruf I
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
+        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
         glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (98, 230)#titik w19
         glVertex2f (118, 230)#titik z19
@@ -782,7 +782,7 @@ def main_menu():
 
         #Huruf D
         #//1
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
+        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
         glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (128, 230)#titik w20
         glVertex2f (148, 230)#titik z20
@@ -791,7 +791,7 @@ def main_menu():
         glEnd()
 
         #//2
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
+        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
         glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (140, 230)#titik z20
         glVertex2f (140, 235)#titik d20
@@ -800,7 +800,7 @@ def main_menu():
         glEnd()
 
         #//3
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
+        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (180, 235)#titik f20
         glVertex2f (200, 228)#titik w24
@@ -820,7 +820,7 @@ def main_menu():
         glEnd()
 
         #//4
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
+        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
         glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (148, 150)#titik e20
         glVertex2f (148, 130)#titik b21
@@ -829,7 +829,7 @@ def main_menu():
         glEnd()
 
         #sisi dalam D
-        glColor3ub(36, 36, 33) #bg layer 2
+        glColor3ub(205,229,50) #bg layer 2
         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (188, 210)#titik g20
         glVertex2f (148, 210)#titik d20
@@ -847,7 +847,7 @@ def main_menu():
         #=========GAME=========
         #Huruf G
         #//1
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
+        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
         glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (-17, 100)#titik l20
         glVertex2f (-37, 80)#titik o20
@@ -856,7 +856,7 @@ def main_menu():
         glEnd()
         
         #//2 lengkungan
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
+        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (-107, 100)#titik p20
         glVertex2f (-129, 94)#titik r26
@@ -869,7 +869,7 @@ def main_menu():
         glEnd()
         
         #//2 hitam lengkungan
-        glColor3ub(74, 74, 54)# menetapkan warna menjadi kuning
+        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (-107, 80)#titik q20
         glVertex2f (-126, 70)#titik z26
@@ -878,7 +878,7 @@ def main_menu():
         glVertex2f (-107, 30)#titik r20
         glEnd()
         #//3
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
+        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
         glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (-107, 30)#titik r20
         glVertex2f (-107, 10)#titik s20
@@ -887,7 +887,7 @@ def main_menu():
         glEnd()
 
         #//4
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
+        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
         glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (-18, -21)#titik g21
         glVertex2f (-4, -15)#titik a21
@@ -897,7 +897,7 @@ def main_menu():
 
         #Huruf A
         #//1
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
+        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
         glBegin(GL_TRIANGLES)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (-12, 10)#titik i21
         glVertex2f (88, 10)#titik k21
@@ -912,7 +912,7 @@ def main_menu():
 
         #Huruf m
         #//1
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
+        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
         glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f (107, 10)#titik n21
         glVertex2f (127, 10)#titik r21
@@ -962,7 +962,7 @@ def main_menu():
 
 
         #//1
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
+        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
 
         glVertex2f (240, 110)#titik c22
         glVertex2f (330, 110)#titik g22
