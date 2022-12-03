@@ -61,20 +61,33 @@ def tulisan():
 
     #huruf S
 
-    # glColor3f(1,1,1)
-    # glBegin(GL_QUADS)
+    glColor3f(1,1,1)
+    #huruf L
+    glBegin(GL_POLYGON)
 
-    # glVertex(58, -13) 
-    # glVertex(233, 0) 
-    # glVertex(173, 32) 
-    # glVertex(84, 25) 
-   
-
-    # glVertex(173, 32) 
-    # glVertex(175,56 ) 
+    glVertex2f(80,200) 
+    glVertex2f(220,200) 
+    glVertex2f(219,174) 
+    glVertex2f(140,174) 
+    glVertex2f(140,140) 
+    glVertex2f(206,109) 
+    glVertex2f(206,75) 
+    glVertex2f(65,42) 
+    # glVertex2f(66,72) 
+    # glVertex2f(133,87) 
+    # glVertex2f(133,108) 
+    # glVertex2f(79,144) 
+    # glVertex2f(80,200) 
+    glEnd()
  
-    # glEnd()
-
+    glColor3f(0,0,0)
+    glBegin(GL_POLYGON)
+    glVertex2f(56, 147) 
+    glVertex2f(133,108) 
+    glVertex2f(133,87) 
+    glVertex2f(67, 73) 
+    glVertex2f(56, 147)  
+    glEnd()
     # #//2
     # glVertex2f(-120, 140) #titik a5
     # glVertex2f(20, 140) #titik d
