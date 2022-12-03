@@ -64,7 +64,6 @@ def tulisan():
     glColor3f(1,1,1)
     #huruf L
     glBegin(GL_POLYGON)
-
     glVertex2f(80,200) 
     glVertex2f(220,200) 
     glVertex2f(219,174) 
@@ -73,11 +72,6 @@ def tulisan():
     glVertex2f(206,109) 
     glVertex2f(206,75) 
     glVertex2f(65,42) 
-    # glVertex2f(66,72) 
-    # glVertex2f(133,87) 
-    # glVertex2f(133,108) 
-    # glVertex2f(79,144) 
-    # glVertex2f(80,200) 
     glEnd()
  
     glColor3f(0,0,0)
@@ -88,44 +82,44 @@ def tulisan():
     glVertex2f(67, 73) 
     glVertex2f(56, 147)  
     glEnd()
-    # #//2
-    # glVertex2f(-120, 140) #titik a5
-    # glVertex2f(20, 140) #titik d
-    # glVertex2f(20, 100) #titik c
-    # glVertex2f(-120, 100) #titik b
 
 
 
-    # #Huruf S
-    # #//1
-    # glVertex2f(170, 130) #titik i
-    # glVertex2f(170, 100) #titik j
-    # glVertex2f(320, 100) #titik k
-    # glVertex2f(320, 130) #titik l
+    #huruf E
+    glColor3f(1,1,1)
+    glBegin(GL_POLYGON)
+    glVertex2f(332,208) 
+    glVertex2f(469,207) 
+    glVertex2f(468,174) 
+    glVertex2f(381,174) 
+    glVertex2f(381,140) 
+    glVertex2f(466,139) 
+    glVertex2f(467,103) 
+    glVertex2f(381,101) 
+    glVertex2f(381,58) 
+    glVertex2f(463,60) 
+    glVertex2f(464,27) 
+    glVertex2f(333,21) 
+    glVertex2f(332,208) 
+    glEnd()
 
-    # #//2
-    # glVertex2f(320, 160) #titik m
-    # glVertex2f(320, 190) #titik n1
-    # glVertex2f(270, 190) #titik o1
-    # glVertex2f(270, 160) #titik n
+    glColor3f(0,0,0)
+    glBegin(GL_POLYGON)
+    glVertex2f(381, 174) 
+    glVertex2f(468,174) 
+    glVertex2f(466,139) 
+    glVertex2f(381, 140) 
+    glVertex2f(381, 174)  
+    glEnd()
 
-    # #//3
-    # glVertex2f(270, 250) #titik p1
-    # glVertex2f(270, 220) #titik s1
-    # glVertex2f(350, 220) #titik r1
-    # glVertex2f(350, 250) #titik q1
-    # glEnd()
-
-    # #//4 Lengkungan dalam
-    # # glBegin(GL_POLYGON)
-    # # glVertex2f(320, 100) #titik k
-    # # glVertex2f(340, 105) #titik b5
-    # # glVertex2f(358, 121) #titik c5
-    # # glVertex2f(365, 143) #titik d5
-    # # glVertex2f(362, 159) #titik e5
-    # # glVertex2f(343, 183) #titik f5
-    # # glVertex2f(320, 190) #titik n1
-    # # glEnd()
+    glColor3f(0,0,0)
+    glBegin(GL_POLYGON)
+    glVertex2f(467, 103) 
+    glVertex2f(463,60) 
+    glVertex2f(381,58) 
+    glVertex2f(381, 101) 
+    glVertex2f(467, 103)   
+    glEnd()
 
     # # #//5 Lengkungan luar
     # # glColor3f(0,0,0)
