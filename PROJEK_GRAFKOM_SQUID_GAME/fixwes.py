@@ -46,7 +46,7 @@ mouseX=int
 mouseY=int
 
 collisionX1=-246
-# collisionX[0]=manggil x1
+
 
 
 # ===== SQUID GAME =====
@@ -73,9 +73,9 @@ def iniHandleMouse(button,state,x,y):
 
     # Saat mengklik tombol kiri mouse
     elif button == GLUT_LEFT_BUTTON and state == GLUT_DOWN:
-        if Pencet == False and (-145 <= PosisiX <= 145 and -125 <= PosisiY <= -45):
+        if Pencet == False and (-640 <= PosisiX <= -460 and -140 <= PosisiY <= -40):
             Pencet = True
-        if (-145 <= PosisiX <= 145 and -255 <= PosisiY <= -175):
+        if (-640 <= PosisiX <= -460 and -260 <= PosisiY <= -160):
             Lanjut = True
         if Pencet == True and (585 <= PosisiX <= 665 and -330 <= PosisiY <= -260):
             Pencet = False
@@ -94,20 +94,20 @@ def KoorMouse(mouseX,mouseY):
     PosisiX = mouseX - 682
     PosisiY = (mouseY - 350) * -1
     # print('posisi x',PosisiX)
-    if (-145 <= PosisiX <= 145 and -125 <= PosisiY <= -45):
+    if (-640<= PosisiX <= -460 and -140 <= PosisiY <= -40):
         merah = 0
         hijau = 1
         biru = 0
-    if (PosisiX <= -145 or 145 <= PosisiX or PosisiY <= -125 or -45 <= PosisiY):
+    if (PosisiX <= -640 or -460  <= PosisiX or PosisiY <=-140 or -40 <= PosisiY):
         merah = 1
         hijau = 1
         biru = 1
 
-    if (-145 <= PosisiX <= 145 and -255 <= PosisiY <= -175):
+    if (-640 <= PosisiX <= -460 and -260 <= PosisiY <= -160):
         merah2 = 0
         hijau2 = 1
         biru2 = 0
-    if (PosisiX <= -145 or 145 <= PosisiX or PosisiY <= -255 or -175 <= PosisiY):
+    if (PosisiX <= -640 or -460 <= PosisiX or PosisiY <= -260 or -160 <= PosisiY):
         merah2 = 1
         hijau2 = 1
         biru2 = 1
@@ -152,7 +152,7 @@ def input_keyboard(key,x,y):
             index -= 1
         if Nyawa == 0:
             pass
-    
+     
     # WINING
     if pos_x == -1000:
         print('You Win')
@@ -258,138 +258,12 @@ def main_menu():
         for i in kor_y:
             Lampu2(i)
 
-        # Kerangka Jembatan Kiri
-        glBegin(GL_QUADS)
-        glColor3ub(235, 242, 15)
-        glVertex2f(-662, 0)
-        glVertex2f(-662, -10)
-        glVertex2f(-182, -10)
-        glVertex2f(-182, 0)
-        # Penopang miring
-        glVertex2f(-542, -10)
-        glVertex2f(-662, -80)
-        glVertex2f(-662, -90)
-        glVertex2f(-522, -10)
-        # Besi Bawah
-        glVertex2f(-572, -30)
-        glVertex2f(-572, -35)
-        glVertex2f(-282, -35)
-        glVertex2f(-282, -30)
-        glEnd()
-        # Pilar bawah
-        glBegin(GL_LINES)
-        glVertex2f(-287, -10)
-        glVertex2f(-287, -30)
-        glVertex2f(-347, -10)
-        glVertex2f(-347, -30)
-        glVertex2f(-407, -10)
-        glVertex2f(-407, -30)
-        glVertex2f(-467, -10)
-        glVertex2f(-467, -30)
-        glVertex2f(-527, -10)
-        glVertex2f(-527, -30)
-        # Pegangan
-        glVertex2f(-212, 0)
-        glVertex2f(-212, 7.5)
-        glVertex2f(-252, 0)
-        glVertex2f(-252, 7.5)
-        glVertex2f(-207, 7.5)
-        glVertex2f(-257, 7.5)
-        # --
-        glVertex2f(-322, 0)
-        glVertex2f(-322, 7.5)
-        glVertex2f(-362, 0)
-        glVertex2f(-362, 7.5)
-        glVertex2f(-317, 7.5)
-        glVertex2f(-367, 7.5)
-        # --
-        glVertex2f(-432, 0)
-        glVertex2f(-432, 7.5)
-        glVertex2f(-472, 0)
-        glVertex2f(-472, 7.5)
-        glVertex2f(-427, 7.5)
-        glVertex2f(-477, 7.5)
-        # --
-        glVertex2f(-542, 0)
-        glVertex2f(-542, 7.5)
-        glVertex2f(-582, 0)
-        glVertex2f(-582, 7.5)
-        glVertex2f(-537, 7.5)
-        glVertex2f(-587, 7.5)
-        glEnd()
-
-        # Kerangka Jembatan Kanan
-        glBegin(GL_QUADS)
-        glColor3ub(235, 242, 15)
-        glVertex2f(662, 0)
-        glVertex2f(662, -10)
-        glVertex2f(182, -10)
-        glVertex2f(182, 0)
-        # Penopang miring
-        glVertex2f(542, -10)
-        glVertex2f(662, -80)
-        glVertex2f(662, -90)
-        glVertex2f(522, -10)
-        # Besi Bawah
-        glVertex2f(572, -30)
-        glVertex2f(572, -35)
-        glVertex2f(282, -35)
-        glVertex2f(282, -30)
-        glEnd()
-        # Pilar bawah
-        glBegin(GL_LINES)
-        glVertex2f(287, -10)
-        glVertex2f(287, -30)
-        glVertex2f(347, -10)
-        glVertex2f(347, -30)
-        glVertex2f(407, -10)
-        glVertex2f(407, -30)
-        glVertex2f(467, -10)
-        glVertex2f(467, -30)
-        glVertex2f(527, -10)
-        glVertex2f(527, -30)
-        # Pegangan
-        glVertex2f(212, 0)
-        glVertex2f(212, 7.5)
-        glVertex2f(252, 0)
-        glVertex2f(252, 7.5)
-        glVertex2f(207, 7.5)
-        glVertex2f(257, 7.5)
-        # --
-        glVertex2f(322, 0)
-        glVertex2f(322, 7.5)
-        glVertex2f(362, 0)
-        glVertex2f(362, 7.5)
-        glVertex2f(317, 7.5)
-        glVertex2f(367, 7.5)
-        # --
-        glVertex2f(432, 0)
-        glVertex2f(432, 7.5)
-        glVertex2f(472, 0)
-        glVertex2f(472, 7.5)
-        glVertex2f(427, 7.5)
-        glVertex2f(477, 7.5)
-        # --
-        glVertex2f(542, 0)
-        glVertex2f(542, 7.5)
-        glVertex2f(582, 0)
-        glVertex2f(582, 7.5)
-        glVertex2f(537, 7.5)
-        glVertex2f(587, 7.5)
-        glEnd()
         glPopMatrix()
 
     def logo():
         glPushMatrix()
         #bintang besar
         #//1
-        #segitiga besar
-        glColor3f(1,1,1)#menetapkan warna menjadi merah
-        glBegin(GL_TRIANGLES)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f(-450,-230) #titik o
-        glVertex2f(-370,-100) #titik N
-        glVertex2f(-290,-230) #titik P
-        glEnd()# Mengakhiri objek
    
         #titik
         glPointSize(2) #menentukan besarnya titik
@@ -417,22 +291,7 @@ def main_menu():
         glEnd()# Mengakhiri objek
 
         glPopMatrix()
-
-    def Circle():
-        glColor3ub(36, 36, 33)
-        Lingkaran_Polygon(440, 140, 20, 60)
-        Lingkaran_Polygon(400, 140, 20, 60)
-        Lingkaran_Polygon(360, 140, 20, 60)
-        Lingkaran_Polygon(320, 140, 20, 60)
-        glColor3f(1, 1, 1) #menetapkan warna menjadi putih
-        Lingkaran_Polygon(380, -160, 74, 100) #logo lingkaran luar
-        glColor3ub(36, 36, 33)
-        Lingkaran_Polygon(380, -160, 63, 100) #logo lingkaran dalam
-        # glColor3f(1, 1, 1) #menetapkan warna menjadi putih
-        # Lingkaran_Polygon(-72, 180, 52, 100) #huruf q luar
-        # glColor3ub(255, 20, 147) 
-        # Lingkaran_Polygon(-72, 180, 35, 100) #huruf q dalam
-
+     
     def logo_dalam():
         glPushMatrix()
         #bintang besar
@@ -580,743 +439,677 @@ def main_menu():
         glEnd()# Mengakhiri objek
 
     def tulisan_judul():
-        glPushMatrix()
-        #=========SQUID=========
-        #huruf s
-        #//1
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (-250, 132)#titik n18
-        glVertex2f (-250, 152)#titik i18
-        glVertex2f (-162, 152)#titik a19
-        glVertex2f (-162, 132)#titik u17
-        glEnd()
+         glPushMatrix()
+         #=========SQUID=========
+         #huruf s
+         #//1
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (-400,200)#titik F
+         glVertex2f (-280.3981451085366,202.1865402888576)#titik E
+         glVertex2f (-281.4159084699256,168.9335130756445)#titik K
+         glVertex2f (-357.9387663390008,167.6365154846433)#titik L
+         glVertex2f (-357.9387663390008,130.0235853456063)#titik M
+         glVertex2f (-400.2970829679632,106.2673900013163)#titik G
+         glEnd()
 
-        #//2
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_POLYGON)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (-357.9387663390008,130.0235853456063)#titik M
+         glVertex2f (-400.2970829679632,106.2673900013163)#titik G
+         glVertex2f (-277.733724267216,103.6029691599957)#titik H
+         glVertex2f (-229.5360048298746,137.8055708916139)#titik N
+         glEnd()
+         
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON)
+         glVertex2f (-277.733724267216,103.6029691599957)#titik H
+         glVertex2f (-229.5360048298746,137.8055708916139)#titik N
+         glVertex2f (-224.3480144658695,-26.913123165548)#titik O
+         glVertex2f (-280,0)#titik l
+         glEnd()
+         
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON)
+         glVertex2f (-224.3480144658695,-26.913123165548)#titik O
+         glVertex2f (-398.1456916600404,-33.3981111205544)#titik P
+         glVertex2f (-400, 0 )#titik J
+         glVertex2f (-280,0)#titik l
+         glEnd()
 
-        glVertex2f (-162, 194)#titik d18
-        glVertex2f (-142, 194)#titik c24
-        glVertex2f (-142, 132)#titik a24
-        glVertex2f (-162, 132)#titik w23
-        glVertex2f (-162, 194)#titik u23  
-        glEnd()
+         #garis huruf q
+         #//1
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (-200, 200)#titik Q
+         glVertex2f (-169.9598498999853, 162.7128195360355)#titik Z
+         glVertex2f (-86.6266898850762, 161.6711550358492)#titik C1
+         glVertex2f (-51.2100968787398, 201.254406042931)#titik T
+         glEnd()
+         
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (-54.3350903792989, -8.1201584945281)#titik U
+         glVertex2f (-82.4600318843308, 9.5881380086401)#titik B1
+         glVertex2f (-86.6266898850762, 161.6711550358492)#titik C1
+         glVertex2f (-51.2100968787398, 201.254406042931)#titik T
+         glEnd()
+         
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (-54.3350903792989, -8.1201584945281)#titik U
+         glVertex2f (-82.4600318843308, 9.5881380086401)#titik B1
+         glVertex2f (0, -100)#titik V
+         glVertex2f (-36.6267938761307, -101.8699635113008)#titik W
+         glVertex2f (-109.3894818824777, -22.4148438341348)#titik S
+         glEnd()
 
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (-82.4600318843308, 9.5881380086401)#titik B1
+         glVertex2f (-54.3350903792989, -8.1201584945281)#titik U
+         glVertex2f (-109.3894818824777, -22.4148438341348)#titik S
+         glVertex2f (-198.0847914050171, -23.7451259973236)#titik R
+         glVertex2f (-165.7931918992399, 8.5464735084537)#titik A1
+         glEnd()
+         
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (-198.0847914050171, -23.7451259973236)#titik R
+         glVertex2f (-165.7931918992399, 8.5464735084537)#titik A1
+         glVertex2f (-169.9598498999853, 162.7128195360355)#titik Z
+         glVertex2f (-200, 200)#titik Q
+         glEnd()
+         
+         #huruf U
+         #//1
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (0, 200)#titik D
+         glVertex2f (33.0583310062419, 200.1748152770248)#titik H1
+         glVertex2f (43.9389927138686, 47.8455513702514)#titik l1
+         glVertex2f (0,0)#titik E1
+         glEnd()
 
-        #//3
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (-162, 194)#titik d18
-        glVertex2f(-162, 174) #titik b18
-        glVertex2f (-200, 174)#titik c18
-        glVertex2f (-200, 194)#titik w17
-        glEnd()
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (43.9389927138686, 47.8455513702514)#titik l1
+         glVertex2f (0,0)#titik E1
+         glVertex2f (132, 0)#titik F1
+         glVertex2f (95.2335407641087, 46.2911711263047)#titik J1
+         glEnd()
 
-        
-        #//4
-        glSecondaryColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_POLYGON)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (132, 0)#titik F1
+         glVertex2f (95.2335407641087, 46.2911711263047)#titik J1
+         glVertex2f (100, 200)#titik K1
+         glVertex2f (137.2018073506687, 197.0660547891314)#titik G1
+         glEnd()
 
-        glVertex2f (-220, 236)#titik c18
-        glVertex2f (-220, 174)#titik i24
-        glVertex2f (-200, 174)#titik j24
-        glVertex2f (-200, 236)#titik k24
-        glEnd()
-    
-        #//5
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (-200, 236)#titik g18
-        glVertex2f (-200, 216)#titik z17
-        glVertex2f (-130, 216)#titik a18
-        glVertex2f (-130, 236)#titik e18
-        glEnd()
+         #huruf I
+         #//1
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (179.9359349200683, 196.9614674998164)#titik L1
+         glVertex2f (167.1437764555124, 1.8810509153372)#titik M1
+         glVertex2f (211.1168211774235, 1.0815410113024)#titik O1
+         glVertex2f (212.715840985493, 196.1619575957816)#titik N1
+         glEnd()
 
-        #garis huruf q
-        #//1
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (-77, 165)#titik k20
-        glVertex2f (-62, 170)#titik j20
-        glVertex2f (-17, 100)#titik l20
-        glVertex2f (-32, 100)#titik m20
-        glEnd()
-       
-        #//2
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (-120, 148)
-        glVertex2f (-100, 148)
-        glVertex2f (-100, 235)
-        glVertex2f (-120, 235)
-        glEnd()
-       
-        #//3
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (-20, 132)#titik m20
-        glVertex2f (-20, 148)#titik l20
-        glVertex2f (-120, 148)#titik k20
-        glVertex2f (-120, 132)#titik j20
-        glEnd()
-       
-        #//4
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (-20, 148)#titik j20
-        glVertex2f (-40, 148)#titik k20
-        glVertex2f (-40, 235)#titik l20
-        glVertex2f (-20, 235)#titik m20
-        glEnd()
-       
-        #//5
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (-40, 235)#titik k20
-        glVertex2f (-40, 220)#titik j20
-        glVertex2f (-120, 220)#titik l20
-        glVertex2f (-120, 235)#titik m20
-        glEnd()
+         # huruf D
+         # //1
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (257.0461158103591, 198.4442701854224)#titik P1
+         glVertex2f (289.1983479061838, 177.3443678725373)#titik T1
+         glVertex2f (375.6074716637128, 153.2301938006687)#titik V1
+         glVertex2f (350, 200)#titik S1
+         glEnd()
 
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (350, 200)#titik S1
+         glVertex2f (375.6074716637128, 153.2301938006687)#titik V1
+         glVertex2f (411.7787327715157, 174.3300961135538)#titik Z1
+         glEnd()
+         
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (375.6074716637128, 153.2301938006687)#titik V1
+         glVertex2f (411.7787327715157, 174.3300961135538)#titik Z1
+         glVertex2f (402.735917494565, 20.6022364053912)#titik R1
+         glVertex2f (374.6027144107183, 52.754468501216)#titik W1
+         glEnd()
+         
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (402.735917494565, 20.6022364053912)#titik R1
+         glVertex2f (374.6027144107183, 52.754468501216)#titik W1
+         glVertex2f (289.1983479061838, 35.6735952003091)#titik U1
+         glVertex2f (260,0)#titik Q1
+         glEnd()
+         
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (289.1983479061838, 35.6735952003091)#titik U1
+         glVertex2f (260,0)#titik Q1
+         glVertex2f (257.0461158103591, 198.4442701854224)#titik P1
+         glVertex2f (289.1983479061838, 177.3443678725373)#titik T1
+         glEnd()
 
-        #huruf U
-        #//1
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (-12, 235)#titik f19
-        glVertex2f (-12, 150)#titik j19
-        glVertex2f (8, 150)#titik l19
-        glVertex2f (8, 235)#titik h19
-        glEnd()
+         #=========GAME=========
+         #Huruf G
+         #//1
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (-117.5434245291542, -94.1984729565961)#titik A2
+         glVertex2f (-125.9999825457698, -133.0986398330282)#titik l2
+         glVertex2f (-220.7134323318653, -133.0986398330282)#titik j2
+         glVertex2f (-244.3917947783892, -95.8897845599192)#titik B2
+         glEnd()
+         
+         #//2 
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (-220.7134323318653, -133.0986398330282)#titik j2
+         glVertex2f (-244.3917947783892, -95.8897845599192)#titik B2
+         glVertex2f (-310.3529473079914, -155.085690676229)#titik C2
+         glVertex2f (-257.9222876049742, -171.9988067094604)#titik K2
+         glEnd()
+         
+         #//3
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (-310.3529473079914, -155.085690676229)#titik C2
+         glVertex2f (-257.9222876049742, -171.9988067094604)#titik K2
+         glVertex2f (-269.7614688282362, -232.8860244290933)#titik L2
+         glVertex2f (-322.1921285312533, -237.9599592390627)#titik D2
+         glEnd()
+         #//4
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (-269.7614688282362, -232.8860244290933)#titik L2
+         glVertex2f (-322.1921285312533, -237.9599592390627)#titik D2
+         glVertex2f (-266.3788456215899, -295.4645537520494)#titik E2
+         glVertex2f (-203.800316298634, -249.7991404623247)#titik M2
+         glEnd()
 
-        # //2
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (8, 150)#titik l19
-        glVertex2f (-12, 150)#titik j19
-        glVertex2f (-9, 140)#titik s25
-        glVertex2f (-5, 130)#titik t25
-        glVertex2f (2, 121)#titik u25
-        glVertex2f (10, 115)#titik v25
-        glVertex2f (20, 111)#titik w25
-        glVertex2f (30, 110)#titik z25
-        glVertex2f (40, 111)#titik a26
-        glVertex2f (50, 113)#titik b26
-        glVertex2f (60, 118)#titik c26
-        glVertex2f (70, 130)#titik d26
-        glVertex2f (78, 140)#titik e26
-        glVertex2f (78, 150)#titik f26
-        glVertex2f (78, 160)#titik v19
-        glVertex2f (58, 160)#titik t19
-        glEnd()
+         #//5
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (-266.3788456215899, -295.4645537520494)#titik E2
+         glVertex2f (-203.800316298634, -249.7991404623247)#titik M2
+         glVertex2f (-177.8414922100025, -233.7896469555579)#titik N2
+         glVertex2f (-200, -300)#titik F2
+         glEnd()
 
-        #//3
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (58, 235)#titik m19
-        glVertex2f (78, 235)#titik s19
-        glVertex2f (78, 160)#titik v19
-        glVertex2f (58, 160)#titik t19
-        glEnd()
+         #//5
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (-177.8414922100025, -233.7896469555579)#titik N2
+         glVertex2f (-200, -300)#titik F2
+         glVertex2f (-114.1608013225079, -215.9729083958619)#titik G2
+         glEnd()
 
-        # sisi dalam U
-        glColor3ub(205,229,50)
-        glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (8, 150)#titik l19
-        glVertex2f (12, 140)#titik g26
-        glVertex2f (20, 133)#titik h26
-        glVertex2f (30, 150)#titik i26
-        glVertex2f (30, 130)#titik j26
-        glVertex2f (48, 134)#titik m26
-        glVertex2f (54, 141)#titik l26
-        glVertex2f (58, 150)#titik k26
-        glEnd()
+         #//6
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (-177.8414922100025, -233.7896469555579)#titik N2
+         glVertex2f (-114.1608013225079, -215.9729083958619)#titik G2
+         glVertex2f (-220.7134323318653, -207.5163503792463)#titik H2
+         glVertex2f (-233.4116799068374, -225.8510487131529)#titik O2
+         glEnd()
+         #Huruf A
+         #//1
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (-42.2136848484562, -122.028320342029)#titik P2
+         glVertex2f (-35.8576017153063, -208.6299530311967)#titik S2
+         glVertex2f (-100, -300)#titik R2
+         glVertex2f (-150, -300)#titik Q2
+         glEnd()
 
-        # sisi dalam U
-        glColor3ub(205,229,50)
-        glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (8, 150)#titik l19
-        glVertex2f (58, 150)#titik k26
-        glVertex2f (58, 160)#titik t19
-        glVertex2f (8, 170)#titik c27
-        glEnd()
+         #//2
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (-42.2136848484562, -122.028320342029)#titik P2
+         glVertex2f (-35.8576017153063, -208.6299530311967)#titik S2
+         glVertex2f (12.7561457499604, -228.6204610355472)#titik W2
+         glVertex2f (46.4742475029727, -119.9692962303112)#titik T2
+         glEnd()
+         #  //3
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (12.7561457499604, -228.6204610355472)#titik W2
+         glVertex2f (46.4742475029727, -119.9692962303112)#titik T2
+         glVertex2f (69.6192720958971, -301.4451667066592)#titik U2
+         glVertex2f (33.7057186142529, -306.4331602457765)#titik V2
+         glEnd()
 
-        #Huruf I
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (98, 235)#titik w19
-        glVertex2f (118, 235)#titik z19
-        glVertex2f (118, 130)#titik b20
-        glVertex2f (98, 130)#titik c20
-        glEnd()
+         #  A dalem pink
+         glColor3ub(255, 153, 204)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (-29.3402700978092, -148.7247220804493)#titik v7
+         glVertex2f (17.8917233402977, -147.7986045620551)#titik W7
+         glVertex2f (18.8178408586919, -188.5477753714009)#titik Z7
+         glVertex2f (-31.1925051345977, -181.1388352242471)#titik A8
+         glEnd()
 
-        #Huruf D
-        #//1
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (128, 235)#titik w20
-        glVertex2f (148, 235)#titik z20
-        glVertex2f (148, 135)#titik b21
-        glVertex2f (128, 135)#titik c21
-        glEnd()
+         #Huruf m
+         #//1
+         glColor3f(1,1,1)
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (100, -300)#titik A3
+         glVertex2f (143.6478049625043, -288.2643877302697)#titik L3
+         glVertex2f (129.5730295344887, -159.8320619496266)#titik K3
+         glVertex2f (86.2618257771104, -99.9461979381938)#titik Z2
+         glEnd()
 
-        #//2
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (148, 230)#titik z20
-        glVertex2f (148, 210)#titik d20
-        glVertex2f (188, 210)#titik g20
-        glVertex2f (188, 230)#titik f20
-        glEnd()
-        
+         #//2
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (86.2618257771104, -99.9461979381938)#titik Z2
+         glVertex2f (163.299003688429, -101.1499038430581)#titik B3
+         glVertex2f (129.5730295344887, -159.8320619496266)#titik K3
+         glEnd()
 
-        #Huruf I
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (98, 230)#titik w19
-        glVertex2f (118, 230)#titik z19
-        glVertex2f (118, 130)#titik b20
-        glVertex2f (98, 130)#titik c20
-        glEnd()
+         #//3
+         glColor3f(1,1,1)
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (129.5730295344887, -159.8320619496266)#titik K3
+         glVertex2f (163.299003688429, -101.1499038430581)#titik B3
+         glVertex2f (182.5582981662587, -181.7981994689702)#titik C3
+         glVertex2f (166.5193150330297, -224.9278983041992)#titik J3
+         glEnd()
 
-        #Huruf D
-        #//1
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (128, 230)#titik w20
-        glVertex2f (148, 230)#titik z20
-        glVertex2f (148, 130)#titik b21
-        glVertex2f (128, 130)#titik c21
-        glEnd()
+         #//4
+         glColor3f(1,1,1)
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (166.5193150330297, -224.9278983041992)#titik J3
+         glVertex2f (182.5582981662587, -181.7981994689702)#titik C3
+         glVertex2f (205.2249474600727, -223.1685513756972)#titik l3
+         glEnd()
 
-        #//2
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (140, 230)#titik z20
-        glVertex2f (140, 235)#titik d20
-        glVertex2f (180, 235)#titik g20
-        glVertex2f (180, 230)#titik f20
-        glEnd()
+         #//5
+         glColor3f(1,1,1)
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (205.2249474600727, -223.1685513756972)#titik l3
+         glVertex2f (182.5582981662587, -181.7981994689702)#titik C3
+         glVertex2f (212.6509457878676, -105.9647274625156)#titik D3
+         glVertex2f (250.9679676011236, -168.6287965921364)#titik H3
+         glEnd()
+         
+         glColor3f(1,1,1)
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (250.9679676011236, -168.6287965921364)#titik H3
+         glVertex2f (212.6509457878676, -105.9647274625156)#titik D3
+         glVertex2f (286.1549061711627, -100.0142663805599)#titik E3
+         glEnd()
+         
+         glColor3f(1,1,1)
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (286.1549061711627, -100.0142663805599)#titik E3
+         glVertex2f (290.6468730960428, -281.2996144999011)#titik F3
+         glVertex2f (250.9679676011236, -284.7456938732658)#titik G3
+         glVertex2f (250.9679676011236, -168.6287965921364)#titik H3
+         glEnd()
 
-        #//3
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (180, 235)#titik f20
-        glVertex2f (200, 228)#titik w24
-        glVertex2f (209, 225)#titik z24
-        glVertex2f (219, 219)#titik a25
-        glVertex2f (228, 209)#titik b25
-        glVertex2f (233, 200)#titik c25
-        glVertex2f (237, 190)#titik d25
-        glVertex2f (238, 180)#titik e25
-        glVertex2f (237, 170)#titik f25
-        glVertex2f (234, 160)#titik g25
-        glVertex2f (228, 150)#titik h25
-        glVertex2f (220, 141)#titik i25
-        glVertex2f (210, 135)#titik j25
-        glVertex2f (200, 131)#titik k25
-        glVertex2f (188, 130)#titik i20
-        glEnd()
-
-        #//4
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (148, 150)#titik e20
-        glVertex2f (148, 130)#titik b21
-        glVertex2f (188, 130)#titik i20
-        glVertex2f (188, 150)#titik h20
-        glEnd()
-
-        #sisi dalam D
-        glColor3ub(255,20,147) #bg layer 2
-        glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (188, 210)#titik g20
-        glVertex2f (148, 210)#titik d20
-        glVertex2f (148, 150)#titik e20
-        glVertex2f (188, 150)#titik h20
-        glVertex2f (200, 152)#titik r25
-        glVertex2f (210, 160)#titik q25
-        glVertex2f (216, 170)#titik p25
-        glVertex2f (218, 180)#titik o25
-        glVertex2f (216, 190)#titik n25
-        glVertex2f (210, 200)#titik m25
-        glVertex2f (199, 208)#titik l25
-        glEnd()
-
-        #=========GAME=========
-        #Huruf G
-        #//1
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (-17, 100)#titik l20
-        glVertex2f (-37, 80)#titik o20
-        glVertex2f (-107, 80)#titik q20
-        glVertex2f (-107, 100)#titik p20
-        glEnd()
-        
-        #//2 lengkungan
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (-107, 100)#titik p20
-        glVertex2f (-129, 94)#titik r26
-        glVertex2f (-144, 80)#titik s26
-        glVertex2f (-151, 59)#titik t26
-        glVertex2f (-150, 40)#titik u26
-        glVertex2f (-140, 24)#titik v26
-        glVertex2f (-125, 13)#titik w26
-        glVertex2f (-107, 10)#titik s20
-        glEnd()
-        
-        #//2 hitam lengkungan
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (-107, 80)#titik q20
-        glVertex2f (-126, 70)#titik z26
-        glVertex2f (-131, 50)#titik a27
-        glVertex2f (-120, 34)#titik b27
-        glVertex2f (-107, 30)#titik r20
-        glEnd()
-        #//3
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (-107, 30)#titik r20
-        glVertex2f (-107, 10)#titik s20
-        glVertex2f (-33, 10)#titik q20 (di kanan in)
-        glVertex2f (-47, 30)#titik u20 (di kanan in)
-        glEnd()
-
-        #//4
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (-18, -21)#titik g21
-        glVertex2f (-4, -15)#titik a21
-        glVertex2f (-67, 65)#titik f21
-        glVertex2f (-72, 50)#titik v20
-        glEnd()
-
-        #Huruf A
-        #//1
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_TRIANGLES)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (-12, 10)#titik i21
-        glVertex2f (88, 10)#titik k21
-        glVertex2f (38, 100)#titik h21
-
-        glColor3ub(255,20,147) #warma pink squid game
-        glVertex2f (38, 70)#titik k21
-        glVertex2f (17, 10)#titik j21
-        glVertex2f (58, 10)#titik l21
-        glEnd()
+         #Huruf E
+         #//0
+         glColor3f(1,1,1)
+         glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (450.1034708039131, -51.6919288607136)#titik W3
+         glVertex2f (457.7189589734655, -71.9998973128537)#titik Z3
+         glVertex2f (400, -100)#titik V3
+         glVertex2f (334.6019002323669, -99.9233539345462)#titik M3
+         glEnd()
 
 
-        #Huruf m
-        #//1
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (107, 10)#titik n21
-        glVertex2f (127, 10)#titik r21
-        glVertex2f (127, 100)#titik p21
-        glVertex2f (107, 100)#titik h21
-        glEnd()
+         #//1
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON) 
+         glVertex2f (334.6019002323669, -99.9233539345462)#titik M3
+         glVertex2f (400, -100)#titik V3
+         glVertex2f (385.3718213627169, -145.6162829518613)#titik U3
+         glVertex2f (366.3331009388356, -196.3862040822114)#titik R3
+         glEnd()
 
-        #//2
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (127, 100)#titik p21
-        glVertex2f (127, 70)#titik s21
-        glVertex2f (158, 10)#titik t21
-        glVertex2f (168, 25)#titik q21
-        glEnd()
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON) 
+         glVertex2f (385.3718213627169, -145.6162829518613)#titik U3
+         glVertex2f (366.3331009388356, -196.3862040822114)#titik R3
+         glVertex2f (453.9112148886893, -173.5397395735539)#titik S3
+         glVertex2f (452.6419668604306, -132.9238026692738)#titik T3
+         glEnd()
 
-        #//3
-        glBegin(GL_TRIANGLES)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (158, 10)#titik t21
-        glVertex2f (168, 25)#titik q21
-        glVertex2f (177, 10)#titik u21
-        glEnd()
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON) 
+         glVertex2f (385.3718213627169, -145.6162829518613)#titik U3
+         glVertex2f (334.6019002323669, -99.9233539345462)#titik M3
+         glVertex2f (330.7941561475907, -301.7337904276878)#titik N3
+         glVertex2f (365.0638529105769, -244.617629156044)#titik Q3
+         glVertex2f (366.3331009388356, -196.3862040822114)#titik R3
+         glEnd()
 
-        #//4
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (168, 25)#titik q21
-        glVertex2f (177, 10)#titik u21
-        glVertex2f (207, 70)#titik b22
-        glVertex2f (208, 100)#titik v21
-        glEnd()
-
-        #//5
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (208, 100)#titik v21
-        glVertex2f (207, 10)#titik a22
-        glVertex2f (227, 10)#titik z21
-        glVertex2f (227, 100)#titik w21
-        glEnd()
-
-        #Huruf E
-        #//0
-        glColor3ub(255,20,147)
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (260, 90)#titik i22
-        glVertex2f (260, 30)#titik j22
-        glVertex2f (330, 30)#titik f22
-        glVertex2f (330, 90)#titik h22
-
-
-        #//1
-        glColor3ub(205,229,50)# menetapkan warna menjadi kuning
-
-        glVertex2f (240, 110)#titik c22
-        glVertex2f (330, 110)#titik g22
-        glVertex2f (330, 90)#titik h22
-        glVertex2f (240, 90)#titik n26
-
-        #//2
-        glVertex2f (240, 110)#titik c22
-        glVertex2f (260, 110)#titik 026
-        glVertex2f (260, 10)#titik p26
-        glVertex2f (240, 10)#titik d22
-
-        #//3
-        glVertex2f (240, 10)#titik d22
-        glVertex2f (240, 30)#titik q26
-        glVertex2f (330, 30)#titik f22
-        glVertex2f (330, 10)#titik e22
-
-        #//4
-        glVertex2f (280, 70)#titik l22
-        glVertex2f (280, 50)#titik k22
-        glVertex2f (370, 50)#titik n22
-        glVertex2f (370, 70)#titik m22
-        glEnd()
-        glPopMatrix()
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON) 
+         glVertex2f (330.7941561475907, -301.7337904276878)#titik N3
+         glVertex2f (365.0638529105769, -244.617629156044)#titik Q3
+         glVertex2f (450.1034708039131, -223.0404126756452)#titik P3
+         glVertex2f (452.6419668604306, -266.1948456364428)#titik O3
+         glEnd()
+         # Warna pink
+         glColor3ub(255, 153, 204)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON) 
+         glVertex2f (457.7189589734655, -71.9998973128537)#titik Z3
+         glVertex2f (400, -100)#titik V3
+         glVertex2f (385.3718213627169, -145.6162829518613)#titik U3
+         glVertex2f (452.6419668604306, -132.9238026692738)#titik T3
+         glEnd()
+         
+         glColor3ub(255, 153, 204)# menetapkan warna menjadi kuning
+         glBegin(GL_POLYGON) 
+         glVertex2f (450.1034708039131, -223.0404126756452)#titik P3
+         glVertex2f (453.9112148886893, -173.5397395735539)#titik S3
+         glVertex2f (366.3331009388356, -196.3862040822114)#titik R3
+         glVertex2f (365.0638529105769, -244.617629156044)#titik Q3
+         glEnd()
+         
+         glPopMatrix()
 
     def Bingkai_menu():
-        glPushMatrix()
-        #kotak start
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (-160, -30)#titik u7
-        glVertex2f (-160, -140)#titik v7
-        glVertex2f (160, -140)#titik w7
-        glVertex2f (160, -30)#titik z7
+         glPushMatrix()
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+         glVertex2f (-650, -30)#titik B8
+         glVertex2f (-450, -30)#titik C8
+         glVertex2f (-450, -150)#titik Z7
+         glVertex2f (-650, -150)#titik W7
+         
+         glColor3f(0,0,0)# menetapkan warna menjadi kuning
+         glVertex2f (-640, -40)#titik A4
+         glVertex2f (-640, -140)#titik B4
+         glVertex2f (-460, -140)#titik D4
+         glVertex2f (-460, -40)#titik C4
 
-        glColor3f(0,0,0)# menetapkan warna menjadi kuning
-        glVertex2f (-145, -45)#titik h6
-        glVertex2f (-145, -125)#titik o6
-        glVertex2f (145, -125)#titik t6
-        glVertex2f (145, -45)#titik u6
+         #kotak quit
+         glColor3f(1,1,1)# menetapkan warna menjadi kuning
+         glVertex2f (-650, -150)#titik W7
+         glVertex2f (-650, -270)#titik V7
+         glVertex2f (-450, -270)#titik A8
+         glVertex2f (-450, -150)#titik Z7
 
-        #kotak quit
-        glColor3f(1,1,1)# menetapkan warna menjadi kuning
-        glVertex2f (-160, -160)#titik j8
-        glVertex2f (-160, -270)#titik m8
-        glVertex2f (160, -270)#titik d8
-        glVertex2f (160, -160)#titik z7
+         glColor3f(0,0,0)# menetapkan warna menjadi kuning
+         glVertex2f (-640, -160)#titik E4
+         glVertex2f (-640, -260)#titik F4
+         glVertex2f (-460, -260)#titik G4
+         glVertex2f (-460, -160)#titik H4
 
-        glColor3f(0,0,0)# menetapkan warna menjadi kuning
-        glVertex2f (-145, -175)#titik u7
-        glVertex2f (-145, -255)#titik v7
-        glVertex2f (145, -255)#titik w7
-        glVertex2f (145, -175)#titik z7
+         glEnd() #Mengakhiri objek
 
-        glEnd() #Mengakhiri objek
-
-        glPopMatrix()
+         glPopMatrix()
 
     def tulisan_start():
-        glPushMatrix()
-        
-        #============= START =============
-        #huruf s
-        #//1
-        glColor3f(merah,hijau,biru)
-        glBegin(GL_QUADS)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f(-140, -110) #titik i1
-        glVertex2f(-140, -120) #titik n8
-        glVertex2f(-90, -120) #titik u8
-        glVertex2f(-90, -110) #titik a8
-        glEnd()# Mengakhiri objek  
+      glPushMatrix()
+      
+      #============= START =============
+      #huruf s
+      #//1
+      glColor3f(merah,hijau,biru)
+      glBegin(GL_POLYGON)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f(-602.7559159105535, -63.1996507473249) #titik l4
+      glVertex2f(-603.5210359498011, -74.8127957958856) #titik O4
+      glVertex2f(-623.6170378732514, -74.3741168768651) #titik P4
+      glVertex2f(-629.9178685179241, -64.6292272003445) #titik J4
+      glEnd()# Mengakhiri objek  
 
-        #//2
-        # glColor3f(merah,hijau,biru)
-        glBegin(GL_POLYGON)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f(-90, -120) #titik u8
-        glVertex2f(-90, -110) #titik a8
-        glVertex2f(-83, -105) #titik n10
-        glVertex2f(-83, -101) #titik o10
-        glVertex2f(-85, -97) #titik p10
-        glVertex2f(-90, -95) #titik b8
-        glVertex2f(-90, -85) #titik v8
-        glVertex2f(-86, -85) #titik d11
-        glVertex2f(-82, -87) #titik c11
-        glVertex2f(-78, -90) #titik b11
-        glVertex2f(-75, -94) #titik a11
-        glVertex2f(-73, -98) #titik z10
-        glVertex2f(-72, -102) #titik w10
-        glVertex2f(-73, -106) #titik v10
-        glVertex2f(-74, -110) #titik u10
-        glVertex2f(-76, -113) #titik t10
-        glVertex2f(-78, -116) #titik s10
-        glVertex2f(-82, -118) #titik r10
-        glVertex2f(-86, -119) #titik q10
-        
-        glEnd()# Mengakhiri objek  
+      #//2
+      # glColor3f(merah,hijau,biru)
+      glBegin(GL_POLYGON)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f(-629.9178685179241, -64.6292272003445) #titik J4
+      glVertex2f(-623.6170378732514, -74.3741168768651)#titik P4
+      glVertex2f(-620, -89.9) #titik Q4
+      glVertex2f(-629.9178685179241, -97.5094856197931)#titik K4
+      glEnd()# Mengakhiri objek  
 
 
-        #//3
-        # glColor3f(merah,hijau,biru)
-        glBegin(GL_POLYGON)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f(-90, -95) #titik b8
-        glVertex2f(-90, -85) #titik v8
-        glVertex2f(-110, -85) #titik w8
-        glVertex2f(-110, -95) #titik c8
-        glEnd()# Mengakhiri objek  
+      #//3
+      # glColor3f(merah,hijau,biru)
+      glBegin(GL_POLYGON)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f(-620, -89.9) #titik Q4
+      glVertex2f(-629.9178685179241, -97.5094856197931)#titik K4
+      glVertex2f(-607.0446452696121, -100.3686385258321)#titik L4
+      glVertex2f(-600, -89.9) #titik R4
+      glEnd()# Mengakhiri objek  
 
-        # #//4
-        # glColor3f(merah,hijau,biru)
-        glBegin(GL_POLYGON)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f(-110, -85) #titik w8
-        glVertex2f(-110, -95) #titik c8
-        glVertex2f(-114, -94) #titik j11
-        glVertex2f(-118, -93) #titik k11
-        glVertex2f(-122, -90) #titik l11
-        glVertex2f(-125, -86) #titik m11
-        glVertex2f(-127, -82) #titik n11
-        glVertex2f(-127, -78) #titik o11
-        glVertex2f(-127, -74) #titik p11
-        glVertex2f(-126, -70) #titik q11
-        glVertex2f(-123, -66) #titik r11
-        glVertex2f(-120, -63) #titik s11
-        glVertex2f(-116, -61) #titik t11
-        glVertex2f(-113, -60) #titik u11
-        glVertex2f(-110, -60) #titik g8
-        glVertex2f(-110, -70) #titik z8
-        glVertex2f(-112, -70) #titik i11
-        glVertex2f(-115, -72) #titik h11
-        glVertex2f(-117, -76) #titik g11
-        glVertex2f(-117, -80) #titik f11
-        glVertex2f(-114, -84) #titik e11
-        glEnd()# Mengakhiri objek  
+      # #//4
+      # glColor3f(merah,hijau,biru)
+      glBegin(GL_POLYGON)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f(-607.0446452696121, -100.3686385258321)#titik L4
+      glVertex2f(-600, -89.9) #titik R4
+      glVertex2f(-597.1197715816262, -120.3328979695743) #titik S4
+      glVertex2f(-607.0446452696121, -117.5235559620662) #titik M4
+      glEnd()# Mengakhiri objek  
 
-        # #//5
-        # glColor3f(merah,hijau,biru)
-        glBegin(GL_POLYGON)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f(-110, -60) #titik g8
-        glVertex2f(-110, -70) #titik z8
-        glVertex2f(-72, -70) #titik a9
-        glVertex2f(-72, -60) #titike8
-        glEnd()# Mengakhiri objek  
+      # #//5
+      # glColor3f(merah,hijau,biru)
+      glBegin(GL_POLYGON)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f(-597.1197715816262, -120.3328979695743) #titik S4
+      glVertex2f(-607.0446452696121, -117.5235559620662) #titik M4
+      glVertex2f(-630.6326567444339, -117.5235559620662) #titik N4
+      glVertex2f(-626.9923386331094, -124.2447817501257)#titik T4
+      glEnd()# Mengakhiri objek  
 
 
-        #huruf T
-        #//1
-        # glColor3f(merah,hijau,biru)
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (-65, -60)#titik v9
-        glVertex2f (-65, -70)#titik w9
-        glVertex2f (-15, -70)#titik b10
-        glVertex2f (-15, -60)#titik c10
-        glEnd()# Mengakhiri objek  
+      #huruf T
+      #//1
+      # glColor3f(merah,hijau,biru)
+      glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f (-594.9860167922345, -63.4327702524633)#titik U4
+      glVertex2f (-594.6303909940026, -73.3902926029578)#titik V4
+      glVertex2f (-562.9325745170911, -72.4467451635837)#titik D5
+      glVertex2f (-555.9562495476276, -63.8951210074671)#titik C5
+      glEnd()# Mengakhiri objek  
 
-        #//2
-        # glColor3f(merah,hijau,biru)
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (-45, -70)#titik z9
-        glVertex2f (-35, -70)#titik a10
-        glVertex2f (-35, -120)#titik u9
-        glVertex2f (-45, -120)#titik r9
-        glEnd()# Mengakhiri objek  
+      #//2
+      # glColor3f(merah,hijau,biru)
+      glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f (-580.2608655702747, -72.8968306454846)#titik W4
+      glVertex2f(-572.3843696370095, -74.0220443502368)#titik B5
+      glVertex2f (-577.3353099379191, -117.0052078717704)#titik A5
+      glVertex2f (-584.3116349073827, -117.2302506127209)#titik Z4
+      glEnd()# Mengakhiri objek  
 
-        #huruf A
-        #//1
-        # glColor3f(merah,hijau,biru)
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (-25, -120)#titik n9
-        glVertex2f (-10, -120)#titik o9
-        glVertex2f (5, -82)#titik s9
-        glVertex2f (5, -60)#titik t9
-        glEnd()# Mengakhiri objek  
+      #huruf A
+      #//1
+      # glColor3f(merah,hijau,biru)
+      glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f (-567.0763802783653, -113.3446618975105)#titik F5
+      glVertex2f (-562.1782871113811, -113.3446618975105)#titik L5
+      glVertex2f (-553.2726631714099, -92.1938050400789)#titik K5
+      glVertex2f (-552.6047413759121, -64.1410896291695)#titik E5
+      glEnd()# Mengakhiri objek  
 
-        #//2
-        # glColor3f(merah,hijau,biru)
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (5, -82)#titik s9
-        glVertex2f (5, -60)#titik t9
-        glVertex2f (35, -120)#titik p9
-        glVertex2f (20, -120)#titik q9
-        glEnd()# Mengakhiri objek  
+      #//2
+      # glColor3f(merah,hijau,biru)
+      glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f (-553.2726631714099, -92.1938050400789)#titik K5
+      glVertex2f (-552.6047413759121, -64.1410896291695)#titik E5
+      glVertex2f (-544.8123204284373, -63.6958084321709)#titik G5
+      glVertex2f (-546.3708046179322, -91.9711644415796)#titik J5
+      glEnd()# Mengakhiri objek  
 
-        #huruf r
-        #//1
-        # glColor3f(merah,hijau,biru)
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (40, -120)#titik b9
-        glVertex2f (50, -120)#titik c9
-        glVertex2f (50, -60)#titik a12
-        glVertex2f (40, -60)#titik d9
-        glEnd()# Mengakhiri objek 
+      # glColor3f(merah,hijau,biru)
+      glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f (-544.8123204284373, -63.6958084321709)#titik G5
+      glVertex2f (-546.3708046179322, -91.9711644415796)#titik J5
+      glVertex2f (-540.8047896554502, -119.8012392539897)#titik l5
+      glVertex2f (-533.6802905034733, -118.6880362614932)#titik H5
+      glEnd()# Mengakhiri objek  
+   
+      #huruf r
+      #//1
+      # glColor3f(merah,hijau,biru)
+      glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f (-504.7997426683807, -62.5675369658114)#titik O5
+      glVertex2f (-504.7997426683807, -76.1343089570932)#titik P5
+      glVertex2f (-520, -89.9)#titik Q5
+      glVertex2f (-529.5851914986066, -64.1329337340363)#titik M5
+      glEnd()# Mengakhiri objek 
 
-        #//2
-        # glColor3f(merah,hijau,biru)
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (50, -60)#titik a12
-        glVertex2f (50, -70)#titik e9
-        glVertex2f (70, -70)#titik w11
-        glVertex2f (70, -60)#titik v11
-        glEnd()# Mengakhiri objek 
+      #//2
+      # glColor3f(merah,hijau,biru)
+      glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f (-520, -89.9)#titik Q5
+      glVertex2f (-529.5851914986066, -64.1329337340363)#titik M5
+      glVertex2f (-526.9761968848986, -118.6609211605337)#titik N5
+      glVertex2f (-521.2364087347411, -117.8782227764213)#titik U5
+      glEnd()# Mengakhiri objek 
 
-        #//3
-        # glColor3f(merah,hijau,biru)
-        glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (70, -70)#titik w11
-        glVertex2f (70, -60)#titik v11
-        glVertex2f (74, -60)#titik g12
-        glVertex2f (78, -61)#titik h12
-        glVertex2f (82, -63)#titik i12
-        glVertex2f (85, -66)#titik j12
-        glVertex2f (87, -70)#titik k12
-        glVertex2f (89, -74)#titik l12
-        glVertex2f (89, -78)#titik m12
-        glVertex2f (88, -82)#titik n12
-        glVertex2f (87, -86)#titik 012
-        glVertex2f (84, -89)#titik p12
-        glVertex2f (82, -91)#titik q12
-        glVertex2f (78, -93)#titik r12
-        glVertex2f (74, -94)#titik f9
-        glVertex2f (70, -85)#titik z11
-        glEnd()# Mengakhiri objek 
+      #//3
+      # glColor3f(merah,hijau,biru)
+      glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f (-520, -89.9)#titik Q5
+      glVertex2f (-521.2364087347411, -101.4415567100609)#titik T5
+      glVertex2f (-514.4530227391002, -114.7474292399717)#titik S5
+      glVertex2f(-506.6260388979762, -112.3993340876345)#titik R5
+      glEnd()
 
-        #//4
-        # glColor3f(merah,hijau,biru)
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (60, -85)#titik i8
-        glVertex2f (70, -120)#titik h8
-        glVertex2f (80, -120)#titik f8
-        glVertex2f (70, -85)#titik z11
-        glVertex2f (74, -84)#titik f12
-        glVertex2f (76, -82)#titik e12
-        glVertex2f (77, -78)#titik d12
-        glVertex2f (76, -74)#titik c12
-        glVertex2f (74, -71)#titik b12
-        glVertex2f (70, -70)#titik w11
-        glEnd()# Mengakhiri objek 
-        
-        #huruf T
-        #//1
-        # glColor3f(merah,hijau,biru)
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (90, -60)#titik k10
-        glVertex2f (90, -70)#titik h10
-        glVertex2f (140, -70)#titik i10
-        glVertex2f (140, -60)#titik j10
-        glEnd()# Mengakhiri objek  
+      #//4 warna pink
+      glColor3ub(255, 153, 204)
+      glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f (-511.3222292026507, -66.2201294250027)#titik A6
+      glVertex2f (-510.2786313571675, -71.9599175751604)#titik Z5
+      glVertex2f (-522.2800065802243, -83.4394938754756)#titik W5
+      glVertex2f (-522.8018055029659, -69.0900235000815)#titik V5
+      glEnd()# Mengakhiri objek 
+      
+      #huruf T
+      #//1
+      glColor3f(merah,hijau,biru)
+      glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f (-497.3344649795508, -61.8370671798031)#titik B6
+      glVertex2f (-497.1163336021505, -72.7436360498188)#titik C6
+      glVertex2f (-468.000157346757, -72.9530421721231)#titik H6
+      glVertex2f (-468.000157346757, -61.3397276393303)#titik l6
+      glEnd()# Mengakhiri objek  
 
-        #//2
-        # glColor3f(merah,hijau,biru)
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (110, -70)#titik f10
-        glVertex2f (120, -70)#titik g10
-        glVertex2f (120, -120)#titik e10
-        glVertex2f (110, -120)#titik d10
-        glEnd()# Mengakhiri objek 
-        glPopMatrix()
+      #//2
+      glColor3f(merah,hijau,biru)
+      glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f (-489.69986677054, -72.7436360498188)#titik D6
+      glVertex2f(-482.7807394794021, -72.9530421721231)#titik G6
+      glVertex2f (-483.0446784460564, -113.8635820035515)#titik F6
+      glVertex2f (-489.9070915790702, -113.8635820035515)#titik E6
+      glEnd()# Mengakhiri objek  
+      glPopMatrix()
 
     def tulisan_exit():
-        glPushMatrix()
-        #=============EXIT============= 
-        #Huruf E
-        #//1
-        glColor3f(merah2,hijau2,biru2)
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (-120, -190)#titik t12
-        glVertex2f (-75, -190)#titik a13
-        glVertex2f (-75, -200)#titik b13
-        glVertex2f (-120, -200)#titik c14
-        glEnd()# Mengakhiri objek  
+      glPushMatrix()
+      #=============EXIT============= 
+      #Huruf E
+      #//1
+      glColor3f(merah2,hijau2,biru2)
+      glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f (-590.3067342179772, -175.9178712212961)#titik t6
+      glVertex2f (-591.023734365581, -183.326872746534)#titik U6
+      glVertex2f (-606.7977376128661, -184.5218729925402)#titik S6
+      glVertex2f (-618.3144006204549, -176.3506634987146)#titik J6
+      glEnd()# Mengakhiri objek  
 
-        #//2
-        # glColor3f(merah2,hijau2,biru2)
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (-120, -190)#titik t12
-        glVertex2f (-110, -190)#titik d14
-        glVertex2f (-110, -245)#titik e14
-        glVertex2f (-120, -245)#titik s12
-        glEnd()# Mengakhiri objek 
+      # //2
+      # glColor3f(merah2,hijau2,biru2)
+      glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f (-618.3144006204549, -176.3506634987146)#titik J6
+      glVertex2f (-606.7977376128661, -184.5218729925402)#titik S6
+      glVertex2f (-611.1646047827719, -218.8025762849464)#titik N6
+      glVertex2f (-621.8892985392964, -230.4209945211783)#titik K6
+      glEnd()# Mengakhiri objek 
 
-        #//3
-        # glColor3f(merah2,hijau2,biru2)
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (-120, -190)#titik t12
-        glVertex2f (-120, -200)#titik c14
-        glVertex2f (-75, -200)#titik b13
-        glVertex2f (-75, -190)#titik a13
-        glEnd()# Mengakhiri objek 
+      #//3
+      # glColor3f(merah2,hijau2,biru2)
+      glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f (-607.5897068639304, -191.543979653787)#titik R6
+      glVertex2f (-591.5026662291435, -188.4159439748015)#titik Q6
+      glVertex2f (-591.5026662291435, -201.3749489305986)#titik P6
+      glVertex2f (-607.5897068639304, -202.2686734103087)#titik O6
+      glEnd()# Mengakhiri objek 
 
-        #//4
-        # glColor3f(merah2,hijau2,biru2)
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (-120, -235)#titik f14
-        glVertex2f (-120, -245)#titik s12
-        glVertex2f (-80, -245)#titik u12
-        glVertex2f (-80, -235)#titik v12
-        glEnd()# Mengakhiri objek 
+      #//4
+      # glColor3f(merah2,hijau2,biru2)
+      glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f (-611.1646047827719, -218.8025762849464)#titik N6
+      glVertex2f (-621.8892985392964, -230.4209945211783)#titik K6
+      glVertex2f (-594.1838396682747, -230.8678567610334)#titik L6
+      glVertex2f (-594.1838396682747, -220.5900252443667)#titik M6
+      glEnd()# Mengakhiri objek 
 
-        #//5
-        # glColor3f(merah,hijau,biru)
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (-100, -210)#titik d13
-        glVertex2f (-100, -220)#titik c13
-        glVertex2f (-55, -220)#titik f13
-        glVertex2f (-55, -210)#titik e13
-        glEnd()# Mengakhiri objek 
+      #Huruf X
+      # //1
+      glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f (-583.6147328403412, -175.2008710736924)#titik V6
+      glVertex2f (-575.0107310690947, -174.4838709260887)#titik W6
+      glVertex2f (-566.599999999997, -198.2)#titik Z6
+      glVertex2f (-573.8157308230883, -197.6668756986075)#titik l7
+      glVertex2f (-565.9287291994458, -204.597877125443)#titik F7
+      glEnd()# Mengakhiri objek 
+      
+      # //2
+      glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f (-551.8277262965698, -229.6928822915716)#titik D7
+      glVertex2f (-556.8467273297969, -230.8878825375778)#titik E7
+      glVertex2f (-565.9287291994458, -204.597877125443)#titik F7
+      glVertex2f (-566.599999999997, -198.2)#titik Z6
+      glVertex2f (-560.6707281170175, -196.9498755510038)#titik C7
+      glEnd()# Mengakhiri objek 
+      
+      # //3
+      glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f (-562.5827285106278, -175.6788711720948)#titik A7
+      glVertex2f (-554.9347269361866, -175.9178712212961)#titik B7
+      glVertex2f (-560.6707281170175, -196.9498755510038)#titik C7
+      glVertex2f (-566.599999999997, -198.2)#titik Z6
+      glEnd()# Mengakhiri objek 
+      
+      # //4
+      glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f (-584.8097330863476, -228.9758821439679)#titik H7
+      glVertex2f (-579.7907320531206, -228.9758821439679)#titik G7
+      glVertex2f (-565.9287291994458, -204.597877125443)#titik F7
+      glVertex2f (-566.599999999997, -198.2)#titik Z6
+      glVertex2f (-573.8157308230883, -197.6668756986075)#titik l7
+      glEnd()# Mengakhiri objek 
+      
+      # Huruf I
+      # //1
+      glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f (-538.9594583397594, -176.9072808305017)#titik M7
+      glVertex2f (-546.599999999997, -178.2)#titik J7
+      glVertex2f (-546.6763652905702, -229.5638223771968)#titik K7
+      glVertex2f (-539.1864261912538, -229.7907902286912)#titik L7
+      glEnd()# Mengakhiri objek 
 
-        #Huruf X
-        #//1
-        # glColor3f(merah,hijau,biru)
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (-40, -190)#titik i13
-        glVertex2f (-20, -190)#titik j13
-        glVertex2f (30, -245)#titik n13
-        glVertex2f (10, -245)#titik m13
-        glEnd()# Mengakhiri objek  
+      # Huruf T
+      # //1
+      glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f (-531.5937527863596, -175.6432625233768)#titik N7
+      glVertex2f (-532.6104566495143, -184.7935972917673)#titik U7
+      glVertex2f (-482.7919673549309, -183.5227174628241)#titik P7
+      glVertex2f (-481.7752634917761, -174.118206728645)#titik O7
+      glEnd()# Mengakhiri objek 
 
-        #//2
-        # glColor3f(merah,hijau,biru)
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (10, -190)#titik k13
-        glVertex2f (30, -190)#titik l13
-        glVertex2f (-20, -245)#titik h13
-        glVertex2f (-40, -245)#titik g13
-        glEnd()# Mengakhiri objek  
+      # //2
+      glBegin(GL_POLYGON)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
+      glVertex2f (-503.3802205838149, -182.251837633881)#titik Q7
+      glVertex2f (-512.2763793864191, -184.0310693944014)#titik T7
+      glVertex2f (-510.4971476258983, -225.4617518179471)#titik S7
+      glVertex2f(-504.3969244469696, -226.4784556811015)#titik R7
+      glEnd()# Mengakhiri objek 
 
-        #Huruf I
-        #//1
-        # glColor3f(merah,hijau,biru)
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (45, -190)#titik q13
-        glVertex2f (60, -190)#titik r13
-        glVertex2f (60, -245)#titik p13
-        glVertex2f (45, -245)#titik o13
-        glEnd()# Mengakhiri objek 
 
-        #huruf T
-        #//1
-        # glColor3f(merah,hijau,biru)
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (70, -190)#titik s13
-        glVertex2f (70, -200)#titik t13
-        glVertex2f (120, -200)#titik w13
-        glVertex2f (120, -190)#titik z13
-        glEnd()# Mengakhiri objek  
-
-        #//2
-        # glColor3f(merah,hijau,biru)
-        glBegin(GL_QUADS)  # memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f (90, -200)#titik u13
-        glVertex2f (100, -200)#titik v13
-        glVertex2f (100, -245)#titik b14
-        glVertex2f (90, -245)#titik a14
-        glEnd()# Mengakhiri objek 
-        glPopMatrix()
+      
+      glPopMatrix()
 
     bg()
     bintang_jatuh()
@@ -1326,7 +1119,6 @@ def main_menu():
     segitiga_kecil()
     tulisan_start()
     tulisan_exit()
-    Circle()
     tulisan_judul()
 
 
@@ -1390,118 +1182,6 @@ def Game_1():
     glVertex2f(682, -50)
     glVertex2f(682, -350)
     glEnd()
-    #--- RUMAH ---
-    # glColor3ub(173, 255, 196)
-    # glVertex2f(682, -50)
-    # glVertex2f(602, -50)
-    # glVertex2f(602, 30)
-    # glVertex2f(682, 30)
-    # Atap
-    # glColor3ub(212, 72, 72)
-    # glVertex2f(682, 30)
-    # glVertex2f(582, 30)
-    # glVertex2f(612, 80)
-    # glVertex2f(682, 80)
-    # Pintu
-    # glColor3ub(54, 38, 21)
-    # glVertex2f(602, -50)
-    # glVertex2f(567, -50)
-    # glVertex2f(567, 10)
-    # glVertex2f(602, 10)
-    
-    # Jendela
-    # Lingkaran_Polygon(640,-4,20,60)
-    # glBegin(GL_QUADS)
-    # glVertex2f(620, -4)
-    # glVertex2f(660, -4)
-    # glVertex2f(660, -34)
-    # glVertex2f(620, -34)
-    # glEnd()
-    # Kaca Jendela
-    # glColor3ub(213, 222, 220)
-    # Lingkaran_Polygon(640,-4,16,60)
-    # glBegin(GL_QUADS)
-    # glVertex2f(624, -4)
-    # glVertex2f(656, -4)
-    # glVertex2f(656, -30)
-    # glVertex2f(624, -30)
-    # Bingkai
-    # glColor3ub(54, 38, 21)
-    # glVertex2f(638, 12)
-    # glVertex2f(642, 12)
-    # glVertex2f(642, -30)
-    # glVertex2f(638, -30)
-    # glVertex2f(624, -11)
-    # glVertex2f(656, -11)
-    # glVertex2f(656, -15)
-    # glVertex2f(624, -15)
-    # glEnd()
-
-    # #--- POHON ---
-    # glBegin(GL_QUADS)
-    # glColor3ub(10, 59, 22)
-    # glVertex2f(-638, -50)
-    # glVertex2f(-629, -30)
-    # glVertex2f(-585, -30)
-    # glVertex2f(-576, -50)
-    # glVertex2f(-629, -30)
-    # glVertex2f(-626, -10)
-    # glVertex2f(-588, -10)
-    # glVertex2f(-585, -30)
-    # glVertex2f(-626, -10)
-    # glVertex2f(-616, 40)
-    # glVertex2f(-598, 40)
-    # glVertex2f(-588, -10)
-    # # Dahan 1
-    # glVertex2f(-609, 40)
-    # glVertex2f(-596, 36)
-    # glVertex2f(-584, 53)
-    # glVertex2f(-586, 62)
-    # glVertex2f(-587, 53)
-    # glVertex2f(-586, 62)
-    # glVertex2f(-547, 72)
-    # glVertex2f(-556, 63)
-    # # Ranting Dahan 1
-    # glVertex2f(-595, 52)
-    # glVertex2f(-585, 54)
-    # glVertex2f(-596, 80)
-    # glVertex2f(-602, 80)
-    # # Dahan 2
-    # glVertex2f(-609, 40)
-    # glVertex2f(-617, 32)
-    # glVertex2f(-634, 53)
-    # glVertex2f(-632, 62)
-    # glVertex2f(-632, 62)
-    # glVertex2f(-634, 53)
-    # glVertex2f(-655, 66)
-    # glVertex2f(-662, 75)
-    # # Ranting Dahan 2
-    # glVertex2f(-622, 42)
-    # glVertex2f(-634, 53)
-    # glVertex2f(-645, 98)
-    # glVertex2f(-640, 90)
-    # glEnd()
-    # # Pucuk Ranting Dahan 1
-    # glBegin(GL_TRIANGLES)
-    # glVertex2f(-547, 72)
-    # glVertex2f(-556, 64)
-    # glVertex2f(-522, 68)
-    # glVertex2f(-550, 67)
-    # glVertex2f(-560, 64)
-    # glVertex2f(-535, 90)
-    # glVertex2f(-562, 67)
-    # glVertex2f(-567, 63)
-    # glVertex2f(-535, 45)
-    # glVertex2f(-572, 60)
-    # glVertex2f(-580, 60)
-    # glVertex2f(-556, 108)
-    # glVertex2f(-596, 80)
-    # glVertex2f(-602, 80)
-    # glVertex2f(-595, 113)
-    # glVertex2f(-595, 80)
-    # glVertex2f(-603, 80)
-    # glVertex2f(-620, 110)
-    # glEnd()
 
     # Garis Finish
     glBegin(GL_QUADS)
@@ -1783,347 +1463,151 @@ def Layer_menang() :
         glVertex2f(-682, 350)
         glEnd()
 
-    def tulisan_winner():
+    def tulisan_YouWin():
 
         glColor3f(0.0, 1.0, 0.0)
         glBegin(GL_QUADS)
-        # Huruf w
-        glVertex2f(-560, 260) #titik b1
-        glVertex2f(-520, 260) #titik n1
-        glVertex2f(-490, 140) # titik o1
-        glVertex2f(-520, 100) #titik c1
+        # Huruf Y
+        glVertex2f(-558.3482480887665, 290.4439587288034) #titik E
+        glVertex2f(-519.2007882925448, 304.4882893627338) #titik G
+        glVertex2f(-485.8933190281239, 228.203440402286) # titik H
+        glVertex2f(-515.5603556138905, 201.3025160728115)#titik F
 
-        glVertex2f(-520, 100) #titik c1
-        glVertex2f(-440, 260) #titik q1
-        glVertex2f(-440, 180) #titik i1
-        glVertex2f(-460, 100) #titik d1
-
-        glVertex2f(-440, 260) #titik q1
-        glVertex2f(-440, 180) #titik i1
-        glVertex2f(-420, 100) #titik j1
-        glVertex2f(-390, 140) #titik s1
-
-        glVertex2f(-420, 100) #titik j1
-        glVertex2f(-360, 260) #titik m1
-        glVertex2f(-320, 260) #titik l1
-        glVertex2f(-360, 100) #titik k1
+        glVertex2f(-455.8091532409052, 301.2649858855318) #titik I
+        glVertex2f(-412.8317735448783, 294.8183789311278) #titik J
+        glVertex2f(-520.2752227849454, 103.5690392838079) #titik K
+        glVertex2f(-558.3482480887665, 117.5095599761792)#titik L
         
-        # Huruf n
-        glVertex2f(-300, 260) #titik p1
-        glVertex2f(-260, 260) #titik t1
-        glVertex2f(-260, 100) # titik u1
-        glVertex2f(-300, 100) #titik r1
+        # Huruf O
+        glVertex2f(-381.6731732652589, 295.8928134235284)#titik M
+        glVertex2f(-253.8154686695791, 299.1161169007305) #titik P
+        glVertex2f(-254.8899031619797, 104.6434737762086) # titik O
+        glVertex2f(-380.5987387728582, 104.6434737762086)#titik N
+      
 
-        # Huruf n
-        glVertex2f(-240, 260) #titik a2
-        glVertex2f(-200, 260) #titik g2
-        glVertex2f(-200, 100) #titik w1
-        glVertex2f(-240, 100) # titik v1
+        # Huruf U
+        glVertex2f(-227.7484851434938, 297.7940781343482) #titik U
+        glVertex2f(-200, 300)#titik A1
+        glVertex2f(-201.962388464912, 135.2295555954625) #titik B1
+        glVertex2f(-229.9907544198922, 104.9589203640838) # titik V
 
-        glVertex2f(-200, 200) #titik z1
-        glVertex2f(-200, 260) #titik g2
-        glVertex2f(-120, 160) #titik f2
-        glVertex2f(-120, 100) # titik b2
+        glVertex2f(-201.962388464912, 135.2295555954625) #titik B1
+        glVertex2f(-229.9907544198922, 104.9589203640838) #titik V
+        glVertex2f(-129.0886369819634, 102.7166510876854) #titik W
+        glVertex2f(-155.9958682987444, 132.9872863190641) # titik C1
 
-        glVertex2f(-120, 260) #titik e2
-        glVertex2f(-120, 100) #titik b2
-        glVertex2f(-80, 100) # titik c2
-        glVertex2f(-80, 260) #titik d2
+        glVertex2f(-155.9958682987444, 132.9872863190641) #titik C1
+        glVertex2f(-129.0886369819634, 102.7166510876854) #titik W
+        glVertex2f(-126.8463677055649, 298.9152127725474) # titik Z
+        glVertex2f(-153.753599022346, 298.9152127725474) #titik D1
 
 
-        # Huruf n #2
-        glVertex2f(-60, 260) #titik a3
-        glVertex2f(-20, 260) #titik g3
-        glVertex2f(-20, 100) #titik w2
-        glVertex2f(-60, 100) # titik v2
+        # Huruf W
+        glVertex2f(-66.3050972428076, 297.7940781343482) #titik E1
+        glVertex2f(-31.5499234586322, 296.672943496149) #titik P1
+        glVertex2f(9.9320581547386, 180.0749411234309) #titik O1
+        glVertex2f(-38.2767312878274, 103.8377857258845) # titik F1
 
-        glVertex2f(-20, 200) #titik z2
-        glVertex2f(-20, 260) #titik g3
-        glVertex2f(60, 160) #titik f3
-        glVertex2f(60, 100) # titik b3
+        glVertex2f(9.9320581547386, 180.0749411234309) #titik O1
+        glVertex2f(-38.2767312878274, 103.8377857258845) # titik F1
+        glVertex2f(18.9011352603323, 99.3532471730877)#titik G1
+        glVertex2f(34.5970201951212, 143.0774980628569)# titik H1
 
-        glVertex2f(60, 260) #titik e3
-        glVertex2f(60, 100) #titik b3
-        glVertex2f(100, 100) # titik c3
-        glVertex2f(100, 260) #titik d3
+        glVertex2f(9.9320581547386, 180.0749411234309) #titik O1
+        glVertex2f(34.5970201951212, 143.0774980628569) #titik H1
+        glVertex2f(65.988790064699, 182.3172103998294) #titik M1
+        glVertex2f(39.081558747918, 215.9512495458057) # titik N1
 
-        # Huruf e
-        glVertex2f(140, 260) #titik h2
-        glVertex2f(280, 260) #titik k2
-        glVertex2f(280, 220) #titik l2
-        glVertex2f(140, 220) # titik j6
+        glVertex2f(65.988790064699, 182.3172103998294) #titik M1
+        glVertex2f(34.5970201951212, 143.0774980628569) #titik H1
+        glVertex2f(52.5351744063085, 108.3223242786814) #titik I1
+        glVertex2f(100, 100) # titik J1
 
-        glVertex2f(140, 260) #titik h2
-        glVertex2f(180, 260) #titik k6
-        glVertex2f(180, 100) #titik m6
-        glVertex2f(140, 100) # titik i2
+        glVertex2f(52.5351744063085, 108.3223242786814) #titik I1
+        glVertex2f(100, 100) #titik J1
+        glVertex2f(128.7723298038548, 302.278616687145) #titik K1
+        glVertex2f(100, 300) # titik L1
+       
+        # Huruf I
+        glVertex2f(150, 300) #titik Q1
+        glVertex2f(200, 300) #titik T1
+        glVertex2f(200, 100) #titik S1
+        glVertex2f(150, 100) # titik R1
 
-        glVertex2f(140, 140) #titik l6
-        glVertex2f(140, 100) # titik i2
-        glVertex2f(280, 100) # titik j2
-        glVertex2f(280, 140) #titik o2
+        # Huruf N
+        glVertex2f(243.1280629001741, 298.9152127725474) #titik U1
+        glVertex2f(276.2207946421577, 299.31898093948) #titik W1
+        glVertex2f(277.8832366843496, 100.4743818112868) # titik E2
+        glVertex2f(242.0069282619749, 101.5955164494861)#titik V1
+
+        glVertex2f(276.2207946421577, 299.31898093948) #titik W1
+        glVertex2f(274.5198327697519, 210.3455763548096)#titik F2
+        glVertex2f(317.1229490213219, 104.9589203640837) # titik D2
+        glVertex2f(328.2816457114811, 171.5963596494065) #titik Z1
+
+        glVertex2f(317.1229490213219, 104.9589203640837) #titik D2
+        glVertex2f(359.7260652728918, 104.9589203640837) #titik C2
+        glVertex2f(365.3317384638879, 300.0363474107465) # titik B2
+        glVertex2f(331.6976993179116, 300.0363474107465) #titik A2
         
-        glVertex2f(140, 200) #titik p2
-        glVertex2f(140, 160) # titik q2
-        glVertex2f(280, 160) # titik r2
-        glVertex2f(280, 200) #titik s2
-
-        # Huruf R
-        glVertex2f(320, 260) #titik t2
-        glVertex2f(360, 260) #titik i3
-        glVertex2f(360, 100) #titik h3
-        glVertex2f(320, 100) # titik u2
-
-        glVertex2f(360, 260) #titik i3
-        glVertex2f(400, 260) #titik j3
-        glVertex2f(400, 230) # titik r3
-        glVertex2f(360, 230) #titik q3
-
+        glEnd()
+      #  dalem Huruf O
+        glBegin(GL_QUADS)
+        glColor3f(0.0, 0.0, 0.0)
+        glVertex2f(-359.1577473869547, 274.122549255441)#titik Q
+        glVertex2f(-280.8135084471286, 277.0513058513224) #titik T
+        glVertex2f(-277.8847518512472, 124.0237737165216) # titik S
+        glVertex2f(-359.1577473869547, 122.5593954185809)#titik R
         glEnd()
 
-        #//3
-        glBegin(GL_POLYGON)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f(400, 260) #titik j3
-        glVertex2f(420,256) #titik o6
-        glVertex2f(440,240) #titik p6
-        glVertex2f(450,210) #titik q6
-        glVertex2f(440,180) #titik r6
-        glVertex2f(420,164) #titik s6
-        glVertex2f(400, 160) #titik l3
-        glEnd()# Mengakhiri objek   
-
-        #//3 dalam r
-        # glColor3f(1.0, 0.43, 0.78) #warma pink squid game
-        # glBegin(GL_POLYGON)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        # glVertex2f(400, 230) #titik r3
-        # glVertex2f(417,220) #titik t6
-        # glVertex2f(418,201) #titik u6
-        # glVertex2f(400, 190) #titik p3
-        # glEnd()# Mengakhiri objek  ]
-
-        #//4
-        glColor3f(0.0, 1.0, 0.0)
-        glBegin(GL_QUADS)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f(400, 160) #titik l3
-        glVertex2f(380,190) #titik n6
-        glVertex2f(400, 190) #titik p3
-        glVertex2f(420,164) #titik s6
-        glEnd()# Mengakhiri objek
-
-        #//5
-        glColor3f(0.0, 1.0, 0.0)
-        glBegin(GL_QUADS)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f(350, 190) #titik 06
-        glVertex2f(380,190) #titik n6
-        glVertex2f(460, 100) #titik m3
-        glVertex2f(430, 100) #titik n3
-        glEnd()# Mengakhiri objek   
 
     def emas():
         
         glBegin(GL_QUADS)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         #sisi depan
         glColor3ub(255,215,0) #warna emas
-        glVertex2f(100, -140) #titik e
-        glVertex2f(-100, -300) #titik l
-        glVertex2f(-540, -300) #titik q
-        glVertex2f(-540, -140) #titik p
+        glVertex2f(-272, -24) #titik H2
+        glVertex2f(-272, -200) #titik l2
+        glVertex2f(300, -200)#titik J2
+        glVertex2f(300, -24) #titik K2
         glEnd()# Mengakhiri objek
 
-    def Nominal_emas():
+    def dolar_emas():
         #huruf S
         glColor3ub(204, 172, 0) #kuning gelap
         glBegin(GL_QUADS)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         #//1
-        glVertex2f(-130, -250) #titik i5
-        glVertex2f(-130, -260) #titik n5
-        glVertex2f(-180, -260) #titik u5
-        glVertex2f(-180, -250) #titik a6
-        glEnd()
+        glVertex2f(60.3226165473092, -60.1530838478018) #titik L2
+        glVertex2f(60.8286947294992, -89.5056184148179)#titik M2
+        glVertex2f(-50.508505352286, -88.999540232628)#titik O2
+        glVertex2f(-81.3792744658719, -60.6591620299917) #titik N2
 
-        #//2
-        glBegin(GL_POLYGON)
-        glVertex2f(-180, -225) #titik v6
-        glVertex2f(-188, -227) #titik j7
-        glVertex2f(-194, -233) #titik i7
-        glVertex2f(-197, -243) #titik h7
-        glVertex2f(-194, -253) #titik g7
-        glVertex2f(-188, -258) #titik e7
-        glVertex2f(-180, -260) #titik u5
-        glEnd()
-
-        #//3
-        glBegin(GL_QUADS)
-        glVertex2f(-180, -225) #titik v6
-        glVertex2f(-180, -235) #titik b7
-        glVertex2f(-160, -235) #titik c7
-        glVertex2f(-160, -225) #titik w6
-        glEnd()
-
-        #//4
-        glBegin(GL_POLYGON)
-        glVertex2f(-160, -235) #titik c7
-        glVertex2f(-150, -232) #titik d7
-        glVertex2f(-144, -224) #titik f7
-        glVertex2f(-143, -214) #titik k7
-        glVertex2f(-147, -206) #titik l7
-        glVertex2f(-155, -201) #titik n7
-        glVertex2f(-160, -200) #titik g6
-        glEnd()
-
-
-        #//4
-        glBegin(GL_QUADS)
-        glVertex2f(-160, -200) #titik g6
-        glVertex2f(-160, -210) #titik z6
-        glVertex2f(-198, -210) #titik a8
-        glVertex2f(-198, -200) #titik e6
-        glEnd()
-
-        #garis
-        glBegin(GL_QUADS)
-        glVertex2f(-166, -184) #titik p7
-        glVertex2f(-174, -184) #titik q7
-        glVertex2f(-174, -276) #titik s7
-        glVertex2f(-166, -276) #titik r7
-        glEnd()
-
-        #angka 4
-        #//1
-        glBegin(GL_QUADS)
-        glVertex2f(-250, -200) #titik h5
-        glVertex2f(-245, -206) #titik t7
-        glVertex2f(-245, -270) #titik d5
-        glVertex2f(-250, -270) #titik g5
-
-        #//2
-        glVertex2f(-210, -245) #titik j5
-        glVertex2f(-214, -240) #titik u7
-        glVertex2f(-245, -240) #titik c5
-        glVertex2f(-245, -245) #titik m5
-
-        #//3
-        glVertex2f(-210, -245) #titik j5
-        glVertex2f(-214, -245) #titik v7
-        glVertex2f(-250, -210) #titik w7
-        glVertex2f(-250, -200) #titik h5
-        glEnd()   
-
-    def logo_bitcoin():
-        glColor3ub(204, 172, 0) #kuning gelap
-        #garis 
-        glBegin(GL_QUADS)
-        glVertex2f(-500, -90) #titik k4
-        glVertex2f(-480, -90) #titik l4
-        glVertex2f(-480, -330)#titik q4
-        glVertex2f(-500, -330) #titik p4
-
-        #garis #2
-        glVertex2f(-460, -90) #titik t4
-        glVertex2f(-440, -90) #titik u4
-        glVertex2f(-440, -330) #titik z4
-        glVertex2f(-460, -330) #titik w4
-
-        #Huruf B
-        #//1
-        glVertex2f(-520, -120) #titik z
-        glVertex2f(-500, -120) #titik m4
-        glVertex2f(-500, -300) #titik 04
-        glVertex2f(-520, -300) #titik a1
-
-        #//2
-        glVertex2f(-520, -120) #titik z
-        glVertex2f(-520, -140) #titik z7
-        glVertex2f(-440, -140) #titik c4
-        glVertex2f(-440, -120) #titik k3
-        glEnd()
-
-        #//3
-        glBegin(GL_POLYGON)
-        glVertex2f(-440, -120) #titik k3
-        glVertex2f(-420, -123) #titik d8
-        glVertex2f(-400, -144) #titik e8
-        glVertex2f(-395, -160) #titik f8
-        glVertex2f(-400, -180) #titik g8
-        glVertex2f(-413, -194) #titik h8
-        glVertex2f(-440, -200) #titik c8
-        glEnd()
-
-        #//4
-        glColor3ub(255, 217, 0) #kuning emas
-        glBegin(GL_POLYGON)
-        glVertex2f(-440, -140) #titik c4
-        glVertex2f(-427, -144) #titik r8
-        glVertex2f(-417, -161) #titik q8
-        glVertex2f(-425, -179) #titik p8
-        glVertex2f(-440, -185) #titik z3
-        glEnd()
-
-        #//4
-        glColor3ub(204, 172, 0) #kuning gelap
-        glBegin(GL_QUADS)
-        glVertex2f(-440, -185) #titik z3
-        glVertex2f(-440, -200) #titik c8
-        glVertex2f(-520, -199)#titik s3
-        glVertex2f(-500, -185) #titik i8
-
-        #//5
-        glVertex2f(-440, -200) #titik c8
-        glVertex2f(-520, -199)#titik s3
-        glVertex2f(-520, -215)#titik j8
-        glVertex2f(-440, -215) #titik j4
-        glEnd()
-
-        #//6
-        glBegin(GL_POLYGON)
-        glVertex2f(-440, -200) #titik c8
-        glVertex2f(-430, -200) #titik t3
-        glVertex2f(-403, -211) #titik k8
-        glVertex2f(-389, -230) #titik l8
-        glVertex2f(-385, -251) #titik m8
-        glVertex2f(-392, -276) #titik o8
-        glVertex2f(-408, -293) #titik n8
-        glVertex2f(-440, -300) #titik u3
-        glEnd()
-
-        #//7
-        glColor3ub(255, 217, 0) #kuning emas
-        glBegin(GL_POLYGON)
-        glVertex2f(-440, -215) #titik j4
-        glVertex2f(-421, -221) #titik u8
-        glVertex2f(-409, -237) #titik v8
-        glVertex2f(-409, -259) #titik w8
-        glVertex2f(-421, -274) #titik z8
-        glVertex2f(-440, -280) #titik i4
-        glEnd()
-
-        # //8
-        glColor3ub(204, 172, 0) #kuning gelap
-        glBegin(GL_QUADS)
-        glVertex2f(-440, -280) #titik i4
-        glVertex2f(-440, -300) #titik u3
-        glVertex2f(-520, -300)#titik a1
-        glVertex2f(-520, -280) #titik b8
-        glEnd()
-
-    def player():
-        glColor3f(0,1,0) #kuning gelap
-        glBegin(GL_LINES)
-        glVertex2f(-270, -100) #titik h
-        glVertex2f(-270, -280) #titik i
-
-        glVertex2f(-270, -280) #titik i
-        glVertex2f(-300, -340) #titik j
-
-        glVertex2f(-270, -280) #titik i
-        glVertex2f(-200, -340) #titik k
-
-        glVertex2f(-270, -160)#titik o
-        glVertex2f(-370, -80) #titik n
-
-        glVertex2f(-270, -160)#titik o
-        glVertex2f(-160, -120) #titik u
-
+        glVertex2f(-81.3792744658719, -60.6591620299917) #titik N2
+        glVertex2f(-50.508505352286, -88.999540232628) #titik O2
+        glVertex2f(-48.9902708057162, -109.2426675202253) #titik P2
+        glVertex2f(-81.3792744658719, -134.040498447532) #titik Q2
+        
+        glVertex2f(-48.9902708057162, -109.2426675202253) #titik P2
+        glVertex2f(-81.3792744658719, -134.040498447532) #titik Q2
+        glVertex2f(43.1159583528515, -132.5222639009621) #titik S2
+        glVertex2f(59.8165383651193, -109.2426675202253) #titik R2
+        
+        glVertex2f(59.8165383651193, -109.2426675202253) #titik R2
+        glVertex2f(43.1159583528515, -132.5222639009621)#titik S2
+        glVertex2f(43.1159583528515, -155.8018602816991) #titik T2
+        glVertex2f(61.840851093879, -173.0085184761568)#titik U2
+        
+        glVertex2f(43.1159583528515, -155.8018602816991) #titik T2
+        glVertex2f(61.840851093879, -173.0085184761568)#titik U2
+        glVertex2f(-85.4278999233913, -174.5267530227266) #titik W2
+        glVertex2f(-81.8853526480618, -155.8018602816991)#titik V2
+        
+        glVertex2f(-23.6516884239555, -40.7265587305026) #titik Z2
+        glVertex2f(-4.4101113946123, -40.039517237825) #titik C3
+        glVertex2f(-4.5885344340126, -188.8046919446165) #titik B3
+        glVertex2f(-25.8478457956111, -189.5377716467406) #titik A3
+        
+        
         glEnd()
 
     def lingkaran_polygon(Posisi_x, Posisi_y, Radius, Jumlah_titik):
@@ -2162,9 +1646,6 @@ def Layer_menang() :
         lingkaran_polygon(475, -245, 10, 60) #titik s5
         lingkaran_polygon(505, -245, 10, 60) #titik f6 
 
-        glColor3f(0,1,0)
-        lingkaran_polygon(-270, -80, 40, 60) #titik e5
-
     def Tombol_lanjut():
         global merah3,hijau3,biru3
         glColor3f(merah3,hijau3,biru3) # Putih
@@ -2176,12 +1657,10 @@ def Layer_menang() :
         glEnd()
 
     background()
-    tulisan_winner()
+    tulisan_YouWin()
     emas()
     Circle()
-    Nominal_emas()
-    logo_bitcoin()
-    player() 
+    dolar_emas()
     Tombol_lanjut()    
 
 def Layer_kalah():
@@ -2375,38 +1854,6 @@ def Layer_kalah():
         glColor3f(1,0,0)
         lingkaran_polygon(40, -100, 50, 100) #kepala npc
 
-    # def logo():
-    #     glColor3ub(204, 14, 117) #warma pink squid game
-    #     glBegin(GL_QUADS)
-    #     glVertex2f(-500, -50) #titik d9
-    #     glVertex2f(-200, -50) #titik e9
-    #     glVertex2f(-200, 250)#titik f9
-    #     glVertex2f(-500, 250) #titik c9
-
-    #     glColor3f(0,0,0)
-    #     glVertex2f(-470, 220) #titik g9
-    #     glVertex2f(-230, 220) #titik h9
-    #     glVertex2f(-230, -20)#titik i9
-    #     glVertex2f(-470, -20) #titik j9
-    #     glEnd()
-
-    #     glColor3ub(204, 14, 117) #warma pink squid game
-    #     glBegin(GL_TRIANGLES)
-    #     glVertex2f(-100, -50) #titik k9
-    #     glVertex2f(200, -50) #titik m9
-    #     glVertex2f(50, 250)#titik l9
-
-    #     glColor3f(0,0,0)
-    #     glVertex2f(-50, -20) #titik n9
-    #     glVertex2f(150, -20) #titik p9
-    #     glVertex2f(50, 190)#titik 09
-    #     glEnd()
-    #     glColor3ub(204, 14, 117) #warma pink squid game
-    #     lingkaran_polygon(400, 100,160,100)
-
-    #     glColor3f(0,0,0)
-    #     lingkaran_polygon(400, 100,120,100)
-
     def Tombol_lanjut():
         global merah3,hijau3,biru3
         glColor3f(merah3,hijau3,biru3) # Putih
@@ -2418,7 +1865,6 @@ def Layer_kalah():
         glEnd()
 
     background()
-    # logo()
     tulisan()
     player_killed_action()
     npc_kill_action()
