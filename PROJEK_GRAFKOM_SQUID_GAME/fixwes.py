@@ -190,34 +190,6 @@ def main_menu():
     
     def bg():
         glPushMatrix()
-        # -=-=-=-=- Latar -=-=-=-=-
-        glBegin(GL_QUADS)
-        # BG layer 1
-        glColor3ub(23, 21, 19)
-        glVertex2f(-682, -350)
-        glVertex2f(-682, 350)
-        glVertex2f(682, 350)
-        glVertex2f(682, -350)
-        # Tanah
-        glColor3ub(46, 46, 41)
-        glVertex2f(-682, -350)
-        glVertex2f(-682, -300)
-        glVertex2f(682, -300)
-        glVertex2f(682,-350)
-        # BG layer 2
-        glColor3ub(36, 36, 33)
-        glVertex2f(-482, -250)
-        glVertex2f(-482, 250)
-        glVertex2f(482, 250)
-        glVertex2f(482, -250)
-        # BG layer 3
-        glColor3ub(74, 74, 54)
-        glVertex2f(-282, -150)
-        glVertex2f(-282, 150)
-        glVertex2f(282, 150)
-        glVertex2f(282, -150)
-        glEnd()
-
         # Lampu Frame atas & lampu bawah
         def Lampu1(x):
             # Lampu frame atas
@@ -292,41 +264,6 @@ def main_menu():
 
         glPopMatrix()
      
-    def logo_dalam():
-        glPushMatrix()
-        #bintang besar
-        #//1
-        glColor3ub(36, 36, 33)
-        glBegin(GL_POLYGON)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f(-374, 164) #titik i17
-        glVertex2f(-430, 164) #titik n17
-        glVertex2f(-384, 144) #titik h17
-        glVertex2f(-405,90) #titik s16
-        glVertex2f(-360, 128) #titik u14
-        glVertex2f(-315, 90) #titik l17
-        glVertex2f(-336, 144) #titik k17
-        glVertex2f(-290, 164) #titik m17
-        glVertex2f(-346, 164) #titik j17
-        glEnd()# Mengakhiri objek  
-
-        #//2
-        glColor3ub(36, 36, 33)
-        glBegin(GL_TRIANGLES)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f(-361,218) #titik o17
-        glVertex2f(-374, 164) #titik i17
-        glVertex2f(-346, 164) #titik j17
-        glEnd()# Mengakhiri objek
-
-        #segitiga besar
-        glColor3ub(36, 36, 33)
-        glBegin(GL_TRIANGLES)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f(-430, -220) #titik z14
-        glVertex2f(-370, -120) #titik v14
-        glVertex2f(-310, -220) #titik w14
-        glEnd()# Mengakhiri objek
-
-        glPopMatrix()
-
     def bintang_jatuh():
         glPushMatrix() 
         glColor3f(1,1,1)#menetapkan warna menjadi merah
@@ -394,50 +331,6 @@ def main_menu():
         glEnd()# Mengakhiri objek  
         glPopMatrix()
     
-    def segitiga_kecil():
-        #segitiga kecil
-        glColor3ub(255, 255, 255)#menetapkan warna menjadi merah
-        glBegin(GL_TRIANGLES)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
-        glVertex2f(-600,-200) #titik a1
-        glVertex2f(-600,-210) #titik p2
-        glVertex2f(-590,-200) #titik q2
-
-
-        glVertex2f(-520,-30) #titik u1
-        glVertex2f(-520,-40) #titik v1
-        glVertex2f(-530,-30) #titik t1
-
-        glVertex2f(-610,220) #titik l2
-        glVertex2f(-620,220) #titik q2
-        glVertex2f(-620,210) #titik k2
-
-        glVertex2f(-350,290) #titik l4
-        glVertex2f(-350,280) #titik h4
-        glVertex2f(-340,290) #titik k4
-
-        glVertex2f(240,280) #titik g5
-        glVertex2f(250,280) #titik k5
-        glVertex2f(250,270) #titik j5
-
-        glVertex2f(500,190) #titik a6
-        glVertex2f(500,180) #titik c6
-        glVertex2f(510,190) #titik d6
-
-
-        glVertex2f(610,-100) #titik p6
-        glVertex2f(620,-100) #titik q6
-        glVertex2f(620,-110) #titik r6
-
-        glVertex2f(450,-280) #titik c7 
-        glVertex2f(460,-290) #titik d7
-        glVertex2f(460,-280) #titik e7
-
-        glVertex2f(-350,-280) #titik q7
-        glVertex2f(-350,-290) #titik p7
-        glVertex2f(-360,-280) #titik O7
-
-        glEnd()# Mengakhiri objek
-
     def tulisan_judul():
          glPushMatrix()
          #=========SQUID=========
@@ -1114,13 +1007,10 @@ def main_menu():
     bg()
     bintang_jatuh()
     logo() 
-    logo_dalam()
     Bingkai_menu()
-    segitiga_kecil()
     tulisan_start()
     tulisan_exit()
     tulisan_judul()
-
 
 def Game_1():
 
@@ -1137,16 +1027,28 @@ def Game_1():
     def gunung(x):
         glBegin(GL_TRIANGLES)
         glColor3ub(178, 191, 207)
-        glVertex2f(-682+x, 30)
-        glVertex2f(-511.5+x, 180)
-        glVertex2f(-341+x, 30)
+        glVertex2f(-682, -50)
+        glVertex2f(-291.3341534744045, 252.9764479964247)
+        glVertex2f(116.6825283472338, -44.0589465102657)
+
+        glColor3ub(178, 191, 207)
+        glVertex2f(-90.6756981586992, -28.0316959080784)
+        glVertex2f(312.7198004098089, 252.9764479964247)
+        glVertex2f(682, -50)
         glEnd()
-        glBegin(GL_QUADS)
-        glVertex2f(-682+x, -50)
-        glVertex2f(-341+x, -50)
-        glVertex2f(-341+x, 30)
-        glVertex2f(-682+x, 30)
+
+    def matahari(Posisi_x, Posisi_y, Radius, Jumlah_titik):
+        glBegin(GL_POLYGON)    
+        for i in range(360):    
+            sudut = i * (2*pi/Jumlah_titik)
+            x = Posisi_x + Radius * cos(sudut)
+            y = Posisi_y + Radius * sin(sudut)
+            glVertex2f(x, y)
         glEnd()
+
+    def lingkaran():
+        glColor3ub(255, 217, 0)
+        matahari(0, 210, 120, 100)
 
     def rumput(y):
         glBegin(GL_TRIANGLES)
@@ -1198,15 +1100,16 @@ def Game_1():
         glPushMatrix()
         glColor3f(1,1,1)
         glBegin(GL_QUADS)
-        glVertex2f(-140, 260) #titik e
-        glVertex2f(-140, 140) #titik h
-        glVertex2f(140, 140)#titik g
-        glVertex2f(140, 260) #titik f
+        glVertex2f(-679, 349)#titik e
+        glVertex2f(-440, 348) #titik h
+        glVertex2f(-438, 214)#titik g
+        glVertex2f(-678, 215) #titik f
         glEnd()
+        
         glColor3f(Merah_lampu,0,0)
-        Lingkaran_Polygon(-55, 200,50,100) #titik A
+        Lingkaran_Polygon(-615, 285,50,100) #titik A
         glColor3f(0,Hijau_lampu,0)
-        Lingkaran_Polygon(55, 200,50,100) #titik C
+        Lingkaran_Polygon(-500, 285,50,100) #titik C
         glPopMatrix()
 
     def Game1_Peserta():
@@ -1442,6 +1345,7 @@ def Game_1():
         glEnd()
             
   
+    lingkaran()
     lampu()
     time_lampu()
     Game1_Peserta()
