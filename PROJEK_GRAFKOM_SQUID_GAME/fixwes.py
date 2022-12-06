@@ -1741,14 +1741,6 @@ def Layer_kalah():
         glEnd()
 
     def Circle():
-        glColor3f(1,1,1)
-        # lingkaran_polygon(-360, 170, 70, 100) #Huruf o #1 sisi luar
-        # lingkaran_polygon(100, 170, 70, 100) #Huruf o #2 sisi luar
-
-        # glColor3ub(204, 14, 117) #warma pink squid game
-        # lingkaran_polygon(-360, 170, 40, 100) #Huruf o #1 sisi dalam
-        # lingkaran_polygon(100, 170, 40, 100) #Huruf o #2 sisi dalam
-
         glColor3f(0,1,0)
         lingkaran_polygon(-200, -100, 50, 100) #kepala player
 
