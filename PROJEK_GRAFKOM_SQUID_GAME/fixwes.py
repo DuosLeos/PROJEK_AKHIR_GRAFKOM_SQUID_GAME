@@ -1736,7 +1736,10 @@ def Layer_kalah():
         glEnd()
 
     def Circle():
+<<<<<<< HEAD
         glColor3f(1,1,1)
+=======
+>>>>>>> e97a9e6436737c4ca1f4612ac3d84a5ff7b5b53c
         glColor3f(0,1,0)
         lingkaran_polygon(-200, -100, 50, 100) #kepala player
         glColor3f(1,0,0)
