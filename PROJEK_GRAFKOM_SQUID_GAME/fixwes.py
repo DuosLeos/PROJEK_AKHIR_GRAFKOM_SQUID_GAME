@@ -285,8 +285,6 @@ def main_menu():
         glVertex2f(-524, 420) #titik l14
         glEnd()# Mengakhiri objek  
 
-
-    
         glBegin(GL_LINE_LOOP)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f(-440, 980) #titik k15
         glVertex2f(-436, 965) #titik m15
@@ -299,7 +297,6 @@ def main_menu():
         glVertex2f(-462, 965) #titik n15
         glVertex2f(-444, 965) #titik l15
         glEnd()# Mengakhiri objek  
-
 
         glBegin(GL_LINE_LOOP)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f(-240, 1380) #titik k15
@@ -314,9 +311,6 @@ def main_menu():
         glVertex2f(-244, 1365) #titik l15
         glEnd()# Mengakhiri objek  
     
-
-
-
         glBegin(GL_LINE_LOOP)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f(-320, 235) #titik k14
         glVertex2f(-316, 220) #titik m14
@@ -1151,6 +1145,7 @@ def Game_1():
         glColor3ub(255, 204, 0)
         Lingkaran_Polygon(493, 9, 7, 30)   
         glPopMatrix()
+        
     def Game1_Boneka():
 
         # Sepatu
@@ -1742,19 +1737,10 @@ def Layer_kalah():
 
     def Circle():
         glColor3f(1,1,1)
-        # lingkaran_polygon(-360, 170, 70, 100) #Huruf o #1 sisi luar
-        # lingkaran_polygon(100, 170, 70, 100) #Huruf o #2 sisi luar
-
-        # glColor3ub(204, 14, 117) #warma pink squid game
-        # lingkaran_polygon(-360, 170, 40, 100) #Huruf o #1 sisi dalam
-        # lingkaran_polygon(100, 170, 40, 100) #Huruf o #2 sisi dalam
-
         glColor3f(0,1,0)
         lingkaran_polygon(-200, -100, 50, 100) #kepala player
-
         glColor3f(1,0,0)
         lingkaran_polygon(-200, -80, 5, 100) #kepala player
-
         glColor3f(1,0,0)
         lingkaran_polygon(40, -100, 50, 100) #kepala npc
 
