@@ -285,6 +285,8 @@ def main_menu():
         glVertex2f(-524, 420) #titik l14
         glEnd()# Mengakhiri objek  
 
+
+    
         glBegin(GL_LINE_LOOP)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f(-440, 980) #titik k15
         glVertex2f(-436, 965) #titik m15
@@ -297,6 +299,7 @@ def main_menu():
         glVertex2f(-462, 965) #titik n15
         glVertex2f(-444, 965) #titik l15
         glEnd()# Mengakhiri objek  
+
 
         glBegin(GL_LINE_LOOP)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f(-240, 1380) #titik k15
@@ -311,6 +314,9 @@ def main_menu():
         glVertex2f(-244, 1365) #titik l15
         glEnd()# Mengakhiri objek  
     
+
+
+
         glBegin(GL_LINE_LOOP)#memulai membuat sebuah objek, GL_POLIGON untuk mengambar poligon
         glVertex2f(-320, 235) #titik k14
         glVertex2f(-316, 220) #titik m14
@@ -1736,10 +1742,7 @@ def Layer_kalah():
         glEnd()
 
     def Circle():
-<<<<<<< HEAD
         glColor3f(1,1,1)
-=======
->>>>>>> e97a9e6436737c4ca1f4612ac3d84a5ff7b5b53c
         glColor3f(0,1,0)
         lingkaran_polygon(-200, -100, 50, 100) #kepala player
         glColor3f(1,0,0)
