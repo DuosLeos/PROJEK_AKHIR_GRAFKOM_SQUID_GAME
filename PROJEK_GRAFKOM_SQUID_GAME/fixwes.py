@@ -29,7 +29,7 @@ Hijau_lampu = 0
 Gerak = False
 jarak_hati, index = [0,40,80,120,160], 4
 
-# ----------
+# Gerak bintang 
 gerakX=2
 gerakY=4
 
