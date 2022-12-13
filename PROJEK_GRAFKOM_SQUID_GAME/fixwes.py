@@ -1809,7 +1809,7 @@ def Main():
     glutInitDisplayMode(GLUT_RGBA)
     glutInitWindowSize(1364,700)
     glutInitWindowPosition(0, 0)
-    glutCreateWindow("2D SHAPE OF SQUID GAME")
+    glutCreateWindow("FINAL SQUID GAME")
     glutDisplayFunc(ShowScreen)
     glutMouseFunc(iniHandleMouse)
     glutPassiveMotionFunc(KoorMouse)
