@@ -4,8 +4,8 @@ from OpenGL.GLU import *
 from math import *
 
 # w, h = 1364, 700
-x_time = 0 #utk gerak horizontal
-y_time = 0 #utk gerak vertikal
+# x_time = 0 #utk gerak horizontal
+# y_time = 0 #utk gerak vertikal
 
 # Warna
 merah, hijau, biru = 1, 1, 1
@@ -166,13 +166,13 @@ def timer(value): #fungsi timer
     global deltaX #panggil variabel global kedalam fungsi timer
     global deltaY
     if boolGerakX==True:
-        deltaX -= gerakX
-        deltaY += gerakY
+        deltaX -= gerakX #gerak ke kiri 
+        deltaY += gerakY #gerak ke atas
         collisionX1 -=gerakX
     else :
         collisionX1 +=gerakX
-        deltaX += gerakX
-        deltaY -= gerakY
+        deltaX += gerakX #gerak ke kanan 
+        deltaY -= gerakY #gerak ke bawah 
     if collisionX1 == 400 :
         deltaX=0
         deltaY=0
